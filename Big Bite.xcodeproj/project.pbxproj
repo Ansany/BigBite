@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		047FDCDC26F0872B00066BD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCDB26F0872B00066BD6 /* AppDelegate.swift */; };
 		047FDCDE26F0872B00066BD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCDD26F0872B00066BD6 /* SceneDelegate.swift */; };
-		047FDCE026F0872B00066BD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCDF26F0872B00066BD6 /* ViewController.swift */; };
 		047FDCE326F0872B00066BD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047FDCE126F0872B00066BD6 /* Main.storyboard */; };
 		047FDCE526F0872D00066BD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047FDCE426F0872D00066BD6 /* Assets.xcassets */; };
 		047FDCE826F0872D00066BD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047FDCE626F0872D00066BD6 /* LaunchScreen.storyboard */; };
+		047FDCF526F09F3C00066BD6 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCF426F09F3C00066BD6 /* OnboardingViewController.swift */; };
+		047FDCF826F0A1FF00066BD6 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCF726F0A1FF00066BD6 /* UIView+Ext.swift */; };
+		047FDCFA26F0A30900066BD6 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCF926F0A30900066BD6 /* OnboardingSlide.swift */; };
+		047FDCFC26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCFB26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		047FDCD826F0872B00066BD6 /* Big Bite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Big Bite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		047FDCDB26F0872B00066BD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		047FDCDD26F0872B00066BD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		047FDCDF26F0872B00066BD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		047FDCE226F0872B00066BD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		047FDCE426F0872D00066BD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		047FDCE726F0872D00066BD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		047FDCE926F0872D00066BD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		047FDCF426F09F3C00066BD6 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		047FDCF726F0A1FF00066BD6 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		047FDCF926F0A30900066BD6 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		047FDCFB26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		047FDCDA26F0872B00066BD6 /* Big Bite */ = {
 			isa = PBXGroup;
 			children = (
+				047FDCF626F0A1D500066BD6 /* Extensions */,
+				047FDCF126F09EFC00066BD6 /* CustomViews */,
+				047FDCF026F09EEF00066BD6 /* Views */,
+				047FDCEF26F09EE300066BD6 /* Model */,
 				047FDCDB26F0872B00066BD6 /* AppDelegate.swift */,
 				047FDCDD26F0872B00066BD6 /* SceneDelegate.swift */,
-				047FDCDF26F0872B00066BD6 /* ViewController.swift */,
 				047FDCE126F0872B00066BD6 /* Main.storyboard */,
 				047FDCE426F0872D00066BD6 /* Assets.xcassets */,
 				047FDCE626F0872D00066BD6 /* LaunchScreen.storyboard */,
 				047FDCE926F0872D00066BD6 /* Info.plist */,
 			);
 			path = "Big Bite";
+			sourceTree = "<group>";
+		};
+		047FDCEF26F09EE300066BD6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				047FDCF926F0A30900066BD6 /* OnboardingSlide.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		047FDCF026F09EEF00066BD6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				047FDCF226F09F1700066BD6 /* Onboarding */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		047FDCF126F09EFC00066BD6 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		047FDCF226F09F1700066BD6 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				047FDCF426F09F3C00066BD6 /* OnboardingViewController.swift */,
+				047FDCFB26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		047FDCF626F0A1D500066BD6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				047FDCF726F0A1FF00066BD6 /* UIView+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +186,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				047FDCE026F0872B00066BD6 /* ViewController.swift in Sources */,
+				047FDCFA26F0A30900066BD6 /* OnboardingSlide.swift in Sources */,
+				047FDCF826F0A1FF00066BD6 /* UIView+Ext.swift in Sources */,
 				047FDCDC26F0872B00066BD6 /* AppDelegate.swift in Sources */,
 				047FDCDE26F0872B00066BD6 /* SceneDelegate.swift in Sources */,
+				047FDCF526F09F3C00066BD6 /* OnboardingViewController.swift in Sources */,
+				047FDCFC26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

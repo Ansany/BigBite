@@ -29,9 +29,10 @@ class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        slides = [OnboardingSlide(title: "You can order tasty food anywhere", description: "We have everything you migh want", image: #imageLiteral(resourceName: "Anywhere")),  OnboardingSlide(title: "Your dishes will be hot. Anyway!", description: "We have the fastest delivery in the city", image: #imageLiteral(resourceName: "FastDelivery")), OnboardingSlide(title: "Join us", description: "You will have 30% discount for your first order. Your code is: FirstOrder", image: #imageLiteral(resourceName: "Join"))
+        slides = [
+            OnboardingSlide(title: "We deliver food for you. Everywhere", description: "We have everything you migh want", image: #imageLiteral(resourceName: "Anywhere")),  OnboardingSlide(title: "Your dishes will be hot. Anyway!", description: "We have the fastest delivery in the city", image: #imageLiteral(resourceName: "FastDelivery")), OnboardingSlide(title: "Join us", description: "You will have 30% discount for your first order. Your secret code: FirstOrder", image: #imageLiteral(resourceName: "Join"))
         ]
-        
+        pageControl.numberOfPages = slides.count
     }
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {

@@ -16,6 +16,7 @@
 		047FDCF826F0A1FF00066BD6 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCF726F0A1FF00066BD6 /* UIView+Ext.swift */; };
 		047FDCFA26F0A30900066BD6 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCF926F0A30900066BD6 /* OnboardingSlide.swift */; };
 		047FDCFC26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCFB26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift */; };
+		04EEF8FA26F2875B002BD50F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EEF8F926F2875B002BD50F /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		047FDCF726F0A1FF00066BD6 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		047FDCF926F0A30900066BD6 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		047FDCFB26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		04EEF8F926F2875B002BD50F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		047FDCF026F09EEF00066BD6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				04EEF8F826F28714002BD50F /* Home */,
 				047FDCF226F09F1700066BD6 /* Onboarding */,
 			);
 			path = Views;
@@ -95,6 +98,7 @@
 		047FDCF126F09EFC00066BD6 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				04EEF8FB26F28776002BD50F /* CollectionViewCells */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -114,6 +118,29 @@
 				047FDCF726F0A1FF00066BD6 /* UIView+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		04EEF8F826F28714002BD50F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				04EEF8F926F2875B002BD50F /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		04EEF8FB26F28776002BD50F /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				04EEF8FC26F28790002BD50F /* CategoryViewCell */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		04EEF8FC26F28790002BD50F /* CategoryViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CategoryViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +218,7 @@
 				047FDCDC26F0872B00066BD6 /* AppDelegate.swift in Sources */,
 				047FDCDE26F0872B00066BD6 /* SceneDelegate.swift in Sources */,
 				047FDCF526F09F3C00066BD6 /* OnboardingViewController.swift in Sources */,
+				04EEF8FA26F2875B002BD50F /* HomeViewController.swift in Sources */,
 				047FDCFC26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

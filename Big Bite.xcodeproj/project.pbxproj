@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,11 @@
 		047FDCFA26F0A30900066BD6 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCF926F0A30900066BD6 /* OnboardingSlide.swift */; };
 		047FDCFC26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCFB26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift */; };
 		04EEF8FA26F2875B002BD50F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EEF8F926F2875B002BD50F /* HomeViewController.swift */; };
+		04EEF90126F2960D002BD50F /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EEF8FF26F2960D002BD50F /* CategoryCollectionViewCell.swift */; };
+		04EEF90226F2960D002BD50F /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EEF90026F2960D002BD50F /* CategoryCollectionViewCell.xib */; };
+		04EEF90426F2B7B4002BD50F /* DishCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EEF90326F2B7B4002BD50F /* DishCategory.swift */; };
+		04EEF90626F2BB32002BD50F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EEF90526F2BB32002BD50F /* String+Extension.swift */; };
+		37C15012E1AB95B30859F895 /* Pods_Big_Bite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20C8E7E1C0F490F2F2819F0 /* Pods_Big_Bite.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,13 @@
 		047FDCF926F0A30900066BD6 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		047FDCFB26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		04EEF8F926F2875B002BD50F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		04EEF8FF26F2960D002BD50F /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		04EEF90026F2960D002BD50F /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		04EEF90326F2B7B4002BD50F /* DishCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCategory.swift; sourceTree = "<group>"; };
+		04EEF90526F2BB32002BD50F /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		3A7324D65698DC4FFAEC70B8 /* Pods-Big Bite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Big Bite.release.xcconfig"; path = "Target Support Files/Pods-Big Bite/Pods-Big Bite.release.xcconfig"; sourceTree = "<group>"; };
+		B20C8E7E1C0F490F2F2819F0 /* Pods_Big_Bite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Big_Bite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D01935E85FA96E2F9C6F327E /* Pods-Big Bite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Big Bite.debug.xcconfig"; path = "Target Support Files/Pods-Big Bite/Pods-Big Bite.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C15012E1AB95B30859F895 /* Pods_Big_Bite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +63,8 @@
 			children = (
 				047FDCDA26F0872B00066BD6 /* Big Bite */,
 				047FDCD926F0872B00066BD6 /* Products */,
+				AD63DE03E0152B7600DAF7F2 /* Pods */,
+				FE2935402F84A846C4E45443 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				047FDCF926F0A30900066BD6 /* OnboardingSlide.swift */,
+				04EEF90326F2B7B4002BD50F /* DishCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -116,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				047FDCF726F0A1FF00066BD6 /* UIView+Ext.swift */,
+				04EEF90526F2BB32002BD50F /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -131,16 +148,35 @@
 		04EEF8FB26F28776002BD50F /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				04EEF8FC26F28790002BD50F /* CategoryViewCell */,
+				04EEF90826F2D9E0002BD50F /* CategoryCollectionViewCell */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
-		04EEF8FC26F28790002BD50F /* CategoryViewCell */ = {
+		04EEF90826F2D9E0002BD50F /* CategoryCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				04EEF8FF26F2960D002BD50F /* CategoryCollectionViewCell.swift */,
+				04EEF90026F2960D002BD50F /* CategoryCollectionViewCell.xib */,
 			);
-			path = CategoryViewCell;
+			path = CategoryCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		AD63DE03E0152B7600DAF7F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D01935E85FA96E2F9C6F327E /* Pods-Big Bite.debug.xcconfig */,
+				3A7324D65698DC4FFAEC70B8 /* Pods-Big Bite.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FE2935402F84A846C4E45443 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B20C8E7E1C0F490F2F2819F0 /* Pods_Big_Bite.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,9 +186,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 047FDCEC26F0872D00066BD6 /* Build configuration list for PBXNativeTarget "Big Bite" */;
 			buildPhases = (
+				2C1DD9F75DC7EC9FF819355A /* [CP] Check Pods Manifest.lock */,
 				047FDCD426F0872B00066BD6 /* Sources */,
 				047FDCD526F0872B00066BD6 /* Frameworks */,
 				047FDCD626F0872B00066BD6 /* Resources */,
+				3EB6A96440206DFE92BE49A6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -200,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04EEF90226F2960D002BD50F /* CategoryCollectionViewCell.xib in Resources */,
 				047FDCE826F0872D00066BD6 /* LaunchScreen.storyboard in Resources */,
 				047FDCE526F0872D00066BD6 /* Assets.xcassets in Resources */,
 				047FDCE326F0872B00066BD6 /* Main.storyboard in Resources */,
@@ -208,17 +247,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2C1DD9F75DC7EC9FF819355A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Big Bite-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3EB6A96440206DFE92BE49A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Big Bite/Pods-Big Bite-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Big Bite/Pods-Big Bite-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Big Bite/Pods-Big Bite-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		047FDCD426F0872B00066BD6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04EEF90126F2960D002BD50F /* CategoryCollectionViewCell.swift in Sources */,
 				047FDCFA26F0A30900066BD6 /* OnboardingSlide.swift in Sources */,
 				047FDCF826F0A1FF00066BD6 /* UIView+Ext.swift in Sources */,
 				047FDCDC26F0872B00066BD6 /* AppDelegate.swift in Sources */,
 				047FDCDE26F0872B00066BD6 /* SceneDelegate.swift in Sources */,
 				047FDCF526F09F3C00066BD6 /* OnboardingViewController.swift in Sources */,
 				04EEF8FA26F2875B002BD50F /* HomeViewController.swift in Sources */,
+				04EEF90426F2B7B4002BD50F /* DishCategory.swift in Sources */,
+				04EEF90626F2BB32002BD50F /* String+Extension.swift in Sources */,
 				047FDCFC26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +447,7 @@
 		};
 		047FDCED26F0872D00066BD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D01935E85FA96E2F9C6F327E /* Pods-Big Bite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -382,6 +467,7 @@
 		};
 		047FDCEE26F0872D00066BD6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A7324D65698DC4FFAEC70B8 /* Pods-Big Bite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

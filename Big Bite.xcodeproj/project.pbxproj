@@ -16,6 +16,10 @@
 		047FDCF826F0A1FF00066BD6 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCF726F0A1FF00066BD6 /* UIView+Ext.swift */; };
 		047FDCFA26F0A30900066BD6 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCF926F0A30900066BD6 /* OnboardingSlide.swift */; };
 		047FDCFC26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCFB26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift */; };
+		04B8474E26F6316400ADEEAA /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8474D26F6316400ADEEAA /* BasketViewController.swift */; };
+		04B8475126F6318000ADEEAA /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8475026F6318000ADEEAA /* AccountViewController.swift */; };
+		04B8475626F648D700ADEEAA /* DishDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8475526F648D700ADEEAA /* DishDetailViewController.swift */; };
+		04B8475826F64FD100ADEEAA /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8475726F64FD100ADEEAA /* UIViewController+Extention.swift */; };
 		04EEF8FA26F2875B002BD50F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EEF8F926F2875B002BD50F /* HomeViewController.swift */; };
 		04EEF90126F2960D002BD50F /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EEF8FF26F2960D002BD50F /* CategoryCollectionViewCell.swift */; };
 		04EEF90226F2960D002BD50F /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EEF90026F2960D002BD50F /* CategoryCollectionViewCell.xib */; };
@@ -43,6 +47,10 @@
 		047FDCF726F0A1FF00066BD6 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		047FDCF926F0A30900066BD6 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		047FDCFB26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		04B8474D26F6316400ADEEAA /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		04B8475026F6318000ADEEAA /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		04B8475526F648D700ADEEAA /* DishDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailViewController.swift; sourceTree = "<group>"; };
+		04B8475726F64FD100ADEEAA /* UIViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
 		04EEF8F926F2875B002BD50F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		04EEF8FF26F2960D002BD50F /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		04EEF90026F2960D002BD50F /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -121,6 +129,9 @@
 		047FDCF026F09EEF00066BD6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				04B8475426F648AD00ADEEAA /* DishDetail */,
+				04B8474C26F6313B00ADEEAA /* Account */,
+				04B8474B26F6312F00ADEEAA /* Basket */,
 				04EEF8F826F28714002BD50F /* Home */,
 				047FDCF226F09F1700066BD6 /* Onboarding */,
 			);
@@ -150,8 +161,33 @@
 			children = (
 				047FDCF726F0A1FF00066BD6 /* UIView+Ext.swift */,
 				04EEF90526F2BB32002BD50F /* String+Extension.swift */,
+				04B8475726F64FD100ADEEAA /* UIViewController+Extention.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		04B8474B26F6312F00ADEEAA /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				04B8474D26F6316400ADEEAA /* BasketViewController.swift */,
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
+		04B8474C26F6313B00ADEEAA /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				04B8475026F6318000ADEEAA /* AccountViewController.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		04B8475426F648AD00ADEEAA /* DishDetail */ = {
+			isa = PBXGroup;
+			children = (
+				04B8475526F648D700ADEEAA /* DishDetailViewController.swift */,
+			);
+			path = DishDetail;
 			sourceTree = "<group>";
 		};
 		04EEF8F826F28714002BD50F /* Home */ = {
@@ -350,12 +386,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B8475826F64FD100ADEEAA /* UIViewController+Extention.swift in Sources */,
+				04B8474E26F6316400ADEEAA /* BasketViewController.swift in Sources */,
 				04EEF90126F2960D002BD50F /* CategoryCollectionViewCell.swift in Sources */,
+				04B8475126F6318000ADEEAA /* AccountViewController.swift in Sources */,
 				047FDCFA26F0A30900066BD6 /* OnboardingSlide.swift in Sources */,
 				047FDCF826F0A1FF00066BD6 /* UIView+Ext.swift in Sources */,
 				04EEF90F26F3F128002BD50F /* BigDishCollectionViewCell.swift in Sources */,
 				047FDCDC26F0872B00066BD6 /* AppDelegate.swift in Sources */,
 				047FDCDE26F0872B00066BD6 /* SceneDelegate.swift in Sources */,
+				04B8475626F648D700ADEEAA /* DishDetailViewController.swift in Sources */,
 				047FDCF526F09F3C00066BD6 /* OnboardingViewController.swift in Sources */,
 				04EEF8FA26F2875B002BD50F /* HomeViewController.swift in Sources */,
 				04EEF90426F2B7B4002BD50F /* DishCategory.swift in Sources */,

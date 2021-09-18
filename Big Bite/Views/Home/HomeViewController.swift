@@ -35,8 +35,10 @@ class HomeViewController: UIViewController {
         .init(id: "id3", name: "Larendy", description: "Gluten Free Asian Glazed Salmon with Edamame Rice", image: "1222", cost: 18)
     ]
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         registerCells()
     }
@@ -86,6 +88,16 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return cell
         default:
             return UICollectionViewCell()
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == categoryCollectionView {
+            
+        } else {
+            let controller = DishDetailViewController.instantiate()
+            controller.dish = collectionView == popularCollectionView ? dish[indexPath.row] : glutenFreeDishes[indexPath.row]
+            tabBarController?.present(controller, animated: true, completion: nil)
         }
     }
 }

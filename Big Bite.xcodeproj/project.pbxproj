@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0415051826F7F8BF001AA01B /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0415051726F7F8BF001AA01B /* IQKeyboardManagerSwift */; };
+		0415051D26F7FE88001AA01B /* DishListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415051B26F7FE88001AA01B /* DishListTableViewCell.swift */; };
+		0415051E26F7FE88001AA01B /* DishListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0415051C26F7FE88001AA01B /* DishListTableViewCell.xib */; };
+		0415052126F804A4001AA01B /* ListDishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415052026F804A4001AA01B /* ListDishesViewController.swift */; };
 		047FDCDC26F0872B00066BD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCDB26F0872B00066BD6 /* AppDelegate.swift */; };
 		047FDCDE26F0872B00066BD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCDD26F0872B00066BD6 /* SceneDelegate.swift */; };
 		047FDCE326F0872B00066BD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047FDCE126F0872B00066BD6 /* Main.storyboard */; };
@@ -20,6 +24,8 @@
 		04B8475126F6318000ADEEAA /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8475026F6318000ADEEAA /* AccountViewController.swift */; };
 		04B8475626F648D700ADEEAA /* DishDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8475526F648D700ADEEAA /* DishDetailViewController.swift */; };
 		04B8475826F64FD100ADEEAA /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8475726F64FD100ADEEAA /* UIViewController+Extention.swift */; };
+		04B8475C26F7DE0700ADEEAA /* BasketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8475A26F7DE0700ADEEAA /* BasketTableViewCell.swift */; };
+		04B8475D26F7DE0700ADEEAA /* BasketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B8475B26F7DE0700ADEEAA /* BasketTableViewCell.xib */; };
 		04EEF8FA26F2875B002BD50F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EEF8F926F2875B002BD50F /* HomeViewController.swift */; };
 		04EEF90126F2960D002BD50F /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EEF8FF26F2960D002BD50F /* CategoryCollectionViewCell.swift */; };
 		04EEF90226F2960D002BD50F /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EEF90026F2960D002BD50F /* CategoryCollectionViewCell.xib */; };
@@ -36,6 +42,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0415051B26F7FE88001AA01B /* DishListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishListTableViewCell.swift; sourceTree = "<group>"; };
+		0415051C26F7FE88001AA01B /* DishListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishListTableViewCell.xib; sourceTree = "<group>"; };
+		0415052026F804A4001AA01B /* ListDishesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDishesViewController.swift; sourceTree = "<group>"; };
 		047FDCD826F0872B00066BD6 /* Big Bite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Big Bite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		047FDCDB26F0872B00066BD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		047FDCDD26F0872B00066BD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +60,8 @@
 		04B8475026F6318000ADEEAA /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		04B8475526F648D700ADEEAA /* DishDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailViewController.swift; sourceTree = "<group>"; };
 		04B8475726F64FD100ADEEAA /* UIViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
+		04B8475A26F7DE0700ADEEAA /* BasketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTableViewCell.swift; sourceTree = "<group>"; };
+		04B8475B26F7DE0700ADEEAA /* BasketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketTableViewCell.xib; sourceTree = "<group>"; };
 		04EEF8F926F2875B002BD50F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		04EEF8FF26F2960D002BD50F /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		04EEF90026F2960D002BD50F /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -74,12 +85,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				37C15012E1AB95B30859F895 /* Pods_Big_Bite.framework in Frameworks */,
+				0415051826F7F8BF001AA01B /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0415051926F7FE52001AA01B /* DIshListTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0415051B26F7FE88001AA01B /* DishListTableViewCell.swift */,
+				0415051C26F7FE88001AA01B /* DishListTableViewCell.xib */,
+			);
+			path = DIshListTableViewCell;
+			sourceTree = "<group>";
+		};
+		0415051A26F7FE5F001AA01B /* BasketTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				04B8475A26F7DE0700ADEEAA /* BasketTableViewCell.swift */,
+				04B8475B26F7DE0700ADEEAA /* BasketTableViewCell.xib */,
+			);
+			path = BasketTableViewCell;
+			sourceTree = "<group>";
+		};
+		0415051F26F8047F001AA01B /* ListDishes */ = {
+			isa = PBXGroup;
+			children = (
+				0415052026F804A4001AA01B /* ListDishesViewController.swift */,
+			);
+			path = ListDishes;
+			sourceTree = "<group>";
+		};
 		047FDCCF26F0872B00066BD6 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +167,7 @@
 		047FDCF026F09EEF00066BD6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0415051F26F8047F001AA01B /* ListDishes */,
 				04B8475426F648AD00ADEEAA /* DishDetail */,
 				04B8474C26F6313B00ADEEAA /* Account */,
 				04B8474B26F6312F00ADEEAA /* Basket */,
@@ -141,6 +180,7 @@
 		047FDCF126F09EFC00066BD6 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				04B8475926F7DDC200ADEEAA /* TableViewCells */,
 				04EEF90926F3EB93002BD50F /* CardView */,
 				04EEF8FB26F28776002BD50F /* CollectionViewCells */,
 			);
@@ -188,6 +228,15 @@
 				04B8475526F648D700ADEEAA /* DishDetailViewController.swift */,
 			);
 			path = DishDetail;
+			sourceTree = "<group>";
+		};
+		04B8475926F7DDC200ADEEAA /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				0415051A26F7FE5F001AA01B /* BasketTableViewCell */,
+				0415051926F7FE52001AA01B /* DIshListTableViewCell */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		04EEF8F826F28714002BD50F /* Home */ = {
@@ -286,6 +335,9 @@
 			dependencies = (
 			);
 			name = "Big Bite";
+			packageProductDependencies = (
+				0415051726F7F8BF001AA01B /* IQKeyboardManagerSwift */,
+			);
 			productName = "Big Bite";
 			productReference = 047FDCD826F0872B00066BD6 /* Big Bite.app */;
 			productType = "com.apple.product-type.application";
@@ -313,6 +365,9 @@
 				Base,
 			);
 			mainGroup = 047FDCCF26F0872B00066BD6;
+			packageReferences = (
+				0415051626F7F8BF001AA01B /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 047FDCD926F0872B00066BD6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -329,9 +384,11 @@
 			files = (
 				04EEF90226F2960D002BD50F /* CategoryCollectionViewCell.xib in Resources */,
 				047FDCE826F0872D00066BD6 /* LaunchScreen.storyboard in Resources */,
+				0415051E26F7FE88001AA01B /* DishListTableViewCell.xib in Resources */,
 				04EEF91A26F40F01002BD50F /* GlutenFreeCollectionViewCell.xib in Resources */,
 				047FDCE526F0872D00066BD6 /* Assets.xcassets in Resources */,
 				04EEF91026F3F128002BD50F /* BigDishCollectionViewCell.xib in Resources */,
+				04B8475D26F7DE0700ADEEAA /* BasketTableViewCell.xib in Resources */,
 				047FDCE326F0872B00066BD6 /* Main.storyboard in Resources */,
 				04EEF91526F40864002BD50F /* LuckiestGuy-Regular.ttf in Resources */,
 			);
@@ -387,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B8475826F64FD100ADEEAA /* UIViewController+Extention.swift in Sources */,
+				0415051D26F7FE88001AA01B /* DishListTableViewCell.swift in Sources */,
 				04B8474E26F6316400ADEEAA /* BasketViewController.swift in Sources */,
 				04EEF90126F2960D002BD50F /* CategoryCollectionViewCell.swift in Sources */,
 				04B8475126F6318000ADEEAA /* AccountViewController.swift in Sources */,
@@ -394,10 +452,12 @@
 				047FDCF826F0A1FF00066BD6 /* UIView+Ext.swift in Sources */,
 				04EEF90F26F3F128002BD50F /* BigDishCollectionViewCell.swift in Sources */,
 				047FDCDC26F0872B00066BD6 /* AppDelegate.swift in Sources */,
+				04B8475C26F7DE0700ADEEAA /* BasketTableViewCell.swift in Sources */,
 				047FDCDE26F0872B00066BD6 /* SceneDelegate.swift in Sources */,
 				04B8475626F648D700ADEEAA /* DishDetailViewController.swift in Sources */,
 				047FDCF526F09F3C00066BD6 /* OnboardingViewController.swift in Sources */,
 				04EEF8FA26F2875B002BD50F /* HomeViewController.swift in Sources */,
+				0415052126F804A4001AA01B /* ListDishesViewController.swift in Sources */,
 				04EEF90426F2B7B4002BD50F /* DishCategory.swift in Sources */,
 				04EEF90626F2BB32002BD50F /* String+Extension.swift in Sources */,
 				04EEF90B26F3EBA8002BD50F /* CardView.swift in Sources */,
@@ -607,6 +667,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0415051626F7F8BF001AA01B /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0415051726F7F8BF001AA01B /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0415051626F7F8BF001AA01B /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 047FDCD026F0872B00066BD6 /* Project object */;
 }

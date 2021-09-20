@@ -9,9 +9,9 @@ import Foundation
 
 struct Dish {
     let id, name, description, image: String
-    let cost: Double
+    let price: Double
     
-    var formattedCost: String {
-        return String(format: "%.2f $", cost)
+    var formatedPrice: String {
+        return String(format: "$ %.2f", price)
     }
 }

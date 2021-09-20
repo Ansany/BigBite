@@ -20,7 +20,7 @@ class BigDishCollectionViewCell: UICollectionViewCell {
         dishTitleLabel.text = category.name
         dishImage.image = UIImage(named: "pizza")
         dishDescriptionLabel.text = category.description
-        dishPriceLabel.text = category.formattedCost
+        dishPriceLabel.text = category.formatedPrice
     }
     
 }

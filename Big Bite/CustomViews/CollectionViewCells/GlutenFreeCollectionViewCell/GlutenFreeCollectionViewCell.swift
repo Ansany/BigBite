@@ -20,7 +20,7 @@ class GlutenFreeCollectionViewCell: UICollectionViewCell {
         glutenFreeImage.image = UIImage(named: "GlutenFree")
         glutenFreeLabel.text = category.name
         glutenFreeDescription.text = category.description
-        glutenFreePriceLabel.text = category.formattedCost
+        glutenFreePriceLabel.text = category.formatedPrice
     }
     
 

@@ -18,12 +18,10 @@ class BasketViewController: UIViewController {
     @IBOutlet weak var commentTextField: UITextField!
     
     
-    var orderList: [Dish] = [
-        .init(id: "id22", name: "Mozarella", description: "ssd", image: "w", price: 12.30),
-        .init(id: "id22", name: "Pepperoni", description: "ssd", image: "w", price: 8.10),
-        .init(id: "id22", name: "Lemonia", description: "ssd", image: "w", price: 9),
-        .init(id: "id22", name: "Koka", description: "ssd", image: "w", price: 10),
-        .init(id: "id22", name: "Feroum", description: "ssd", image: "w", price: 2),
+    var orderList: [Order] = [
+        .init(id: "id1", amount: 1, dish: .init(id: "id1", name: "Mozarella", description: "Mozarela pizza", image: "1", price: 12.20)),
+        .init(id: "id1", amount: 2, dish: .init(id: "id1", name: "Pepperoni", description: "Mozarela pizza", image: "1", price: 8.50)),
+        .init(id: "id1", amount: 3, dish: .init(id: "id1", name: "Likanchi", description: "Mozarela pizza", image: "1", price: 4.10))
     ]
     
     override func viewDidLoad() {

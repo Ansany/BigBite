@@ -18,15 +18,17 @@ class BasketTableViewCell: UITableViewCell {
     @IBOutlet weak var basketCellStepper: UIStepper!
     @IBOutlet weak var basketCellCountLabel: UILabel!
     
-    var items: Int = 1
+    var stepperValue: Double = 1
     var totalCellPrice : Double = 0
     
     
-    func setup(_ category: Dish) {
+    func setup(_ order: Order) {
         basketCellImage.image = UIImage(named: "pizza")
-        basketCellPriceLabel.text = category.formatedPrice
-        basketCellNameLabel.text = category.name
-        totalCellPrice = category.price
+        basketCellPriceLabel.text = String(format: "$ %.2f", (order.dish.price * order.amount))
+        basketCellNameLabel.text = order.dish.name
+        basketCellStepper.value = order.amount
+        basketCellCountLabel.text = String(Int(order.amount))
+        totalCellPrice = order.dish.price
     }
 
 //    override func setSelected(_ selected: Bool, animated: Bool) {
@@ -36,9 +38,9 @@ class BasketTableViewCell: UITableViewCell {
     
     
     @IBAction func basketCellStepperPressed(_ sender: UIStepper) {
-        basketCellCountLabel.text = String(format: "%.0f", sender.value)
-        items = Int (sender.value)
-        let price = totalCellPrice * Double(items)
+        stepperValue = sender.value
+        basketCellCountLabel.text = String(format: "%.0f", stepperValue)
+        let price = totalCellPrice * stepperValue
         basketCellPriceLabel.text = String(format: "$ %.2f", price)
         }
     

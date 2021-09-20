@@ -14,10 +14,10 @@ class ListDishesViewController: UIViewController {
     
     var category: DishCategory!
     var dishes: [Dish] = [
-        .init(id: "id1", name: "Margaritta", description: "This is the best pizza in the world", image: "Pizza", price: 8.4532),
-        .init(id: "id2 ", name: "Pepperoni", description: "This is the best pizza in the world", image: "Pizza",price: 12.0023),
+        .init(id: "id1", name: "Margaritta", description: "This is the best pizza in the world", image: "Pizza", price: 8.45),
+        .init(id: "id2 ", name: "Pepperoni", description: "This is the best pizza in the world", image: "Pizza",price: 12.00),
         .init(id: "id3", name: "Terolla", description: "This is the best pizza in the world", image: "Pizza", price: 14),
-        .init(id: "id4", name: "Likonia", description: "This is the best pizza in the world", image: "Pizza", price: 8.4324)
+        .init(id: "id4", name: "Likonia", description: "This is the best pizza in the world", image: "Pizza", price: 8.40)
     ]
     
     override func viewDidLoad() {

@@ -11,6 +11,8 @@
 		0415051D26F7FE88001AA01B /* DishListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415051B26F7FE88001AA01B /* DishListTableViewCell.swift */; };
 		0415051E26F7FE88001AA01B /* DishListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0415051C26F7FE88001AA01B /* DishListTableViewCell.xib */; };
 		0415052126F804A4001AA01B /* ListDishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415052026F804A4001AA01B /* ListDishesViewController.swift */; };
+		0415052326F82B73001AA01B /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415052226F82B73001AA01B /* Order.swift */; };
+		0415055326F92A28001AA01B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415055226F92A28001AA01B /* NetworkService.swift */; };
 		047FDCDC26F0872B00066BD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCDB26F0872B00066BD6 /* AppDelegate.swift */; };
 		047FDCDE26F0872B00066BD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCDD26F0872B00066BD6 /* SceneDelegate.swift */; };
 		047FDCE326F0872B00066BD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047FDCE126F0872B00066BD6 /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 		0415051B26F7FE88001AA01B /* DishListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishListTableViewCell.swift; sourceTree = "<group>"; };
 		0415051C26F7FE88001AA01B /* DishListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishListTableViewCell.xib; sourceTree = "<group>"; };
 		0415052026F804A4001AA01B /* ListDishesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDishesViewController.swift; sourceTree = "<group>"; };
+		0415052226F82B73001AA01B /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		0415055226F92A28001AA01B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		047FDCD826F0872B00066BD6 /* Big Bite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Big Bite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		047FDCDB26F0872B00066BD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		047FDCDD26F0872B00066BD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +122,14 @@
 			path = ListDishes;
 			sourceTree = "<group>";
 		};
+		0415055126F92A09001AA01B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0415055226F92A28001AA01B /* NetworkService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		047FDCCF26F0872B00066BD6 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +151,7 @@
 		047FDCDA26F0872B00066BD6 /* Big Bite */ = {
 			isa = PBXGroup;
 			children = (
+				0415055126F92A09001AA01B /* Networking */,
 				047FDCF626F0A1D500066BD6 /* Extensions */,
 				047FDCF126F09EFC00066BD6 /* CustomViews */,
 				047FDCF026F09EEF00066BD6 /* Views */,
@@ -160,6 +173,7 @@
 				047FDCF926F0A30900066BD6 /* OnboardingSlide.swift */,
 				04EEF90326F2B7B4002BD50F /* DishCategory.swift */,
 				04EEF91126F3F8DE002BD50F /* Dish.swift */,
+				0415052226F82B73001AA01B /* Order.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -445,8 +459,10 @@
 			files = (
 				04B8475826F64FD100ADEEAA /* UIViewController+Extention.swift in Sources */,
 				0415051D26F7FE88001AA01B /* DishListTableViewCell.swift in Sources */,
+				0415055326F92A28001AA01B /* NetworkService.swift in Sources */,
 				04B8474E26F6316400ADEEAA /* BasketViewController.swift in Sources */,
 				04EEF90126F2960D002BD50F /* CategoryCollectionViewCell.swift in Sources */,
+				0415052326F82B73001AA01B /* Order.swift in Sources */,
 				04B8475126F6318000ADEEAA /* AccountViewController.swift in Sources */,
 				047FDCFA26F0A30900066BD6 /* OnboardingSlide.swift in Sources */,
 				047FDCF826F0A1FF00066BD6 /* UIView+Ext.swift in Sources */,

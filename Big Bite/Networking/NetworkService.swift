@@ -9,6 +9,8 @@ import Foundation
 
 struct NetworkService {
     
-    func placeOrder()
+    func placeOrder(){
+        
+    }
     
 }

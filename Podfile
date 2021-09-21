@@ -6,6 +6,7 @@ target 'Big Bite' do
   use_frameworks!
 
   # Pods for Big Bite
-  pod "Kingfisher"
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
 end

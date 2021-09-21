@@ -8,7 +8,6 @@
 import Foundation
 
 struct Order {
-    let id: String
     let amount: Double
     let dish: Dish
 }

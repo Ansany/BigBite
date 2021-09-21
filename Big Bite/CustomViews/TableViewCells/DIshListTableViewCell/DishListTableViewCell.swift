@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import Firebase
 
 class DishListTableViewCell: UITableViewCell {
     
     static let identifier = String(describing: DishListTableViewCell.self)
+    
+    let db = Firestore.firestore()
 
     @IBOutlet weak var dishListImageView: UIImageView!
     @IBOutlet weak var dishListTitleLabel: UILabel!
@@ -21,7 +24,8 @@ class DishListTableViewCell: UITableViewCell {
     var stepperValue: Double = 1
     var totalCellPrice : Double = 0
     
-    var orders: [Order] = []
+    var dish: Dish!
+    var dishListOrder: Order!
     
     func setup(_ dish: Dish) {
         dishListImageView.image = UIImage(named: "pizza")
@@ -30,18 +34,21 @@ class DishListTableViewCell: UITableViewCell {
         totalCellPrice = dish.price
     }
     
-    
     @IBAction func addPressed(_ sender: UIButton) {
-        orders.append(.init(id: "id1", amount: stepperValue, dish: .init(id: "id1", name: dishListTitleLabel.text!, description: "2", image: "", price: totalCellPrice)))
+        dish = .init(id: nil, name: dishListTitleLabel.text!, description: nil, image: nil, price: totalCellPrice)
+        dishListOrder = .init(amount: stepperValue, dish: dish)
         
-        stepperValue = 1
-        dishListStepper.value = stepperValue
         
-        dishListCounterLabel.text = String(Int(stepperValue))
-        let price = totalCellPrice * stepperValue
-        dishListPriceLabel.text = String(format: "$ %.2f", price)
-        
-        print(orders)
+        db.collection("DishDetail").addDocument(data: [
+            "amount": stepperValue, "dishName":  dishListOrder.dish.name,
+            "price": dishListOrder.dish.price
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
     }
     
     @IBAction func stepperPressed(_ sender: UIStepper) {

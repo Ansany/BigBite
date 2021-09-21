@@ -8,7 +8,10 @@
 import Foundation
 
 struct Dish {
-    let id, name, description, image: String
+    let id: String?
+    let name: String
+    let description: String?
+    let image: String?
     let price: Double
     
     var formatedPrice: String {

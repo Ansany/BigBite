@@ -13,6 +13,7 @@
 		0415052126F804A4001AA01B /* ListDishesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415052026F804A4001AA01B /* ListDishesViewController.swift */; };
 		0415052326F82B73001AA01B /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415052226F82B73001AA01B /* Order.swift */; };
 		0415055326F92A28001AA01B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415055226F92A28001AA01B /* NetworkService.swift */; };
+		0415055526F9314B001AA01B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0415055426F9314B001AA01B /* GoogleService-Info.plist */; };
 		047FDCDC26F0872B00066BD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCDB26F0872B00066BD6 /* AppDelegate.swift */; };
 		047FDCDE26F0872B00066BD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCDD26F0872B00066BD6 /* SceneDelegate.swift */; };
 		047FDCE326F0872B00066BD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047FDCE126F0872B00066BD6 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		0415052026F804A4001AA01B /* ListDishesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDishesViewController.swift; sourceTree = "<group>"; };
 		0415052226F82B73001AA01B /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		0415055226F92A28001AA01B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		0415055426F9314B001AA01B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		047FDCD826F0872B00066BD6 /* Big Bite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Big Bite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		047FDCDB26F0872B00066BD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		047FDCDD26F0872B00066BD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				047FDCE426F0872D00066BD6 /* Assets.xcassets */,
 				047FDCE626F0872D00066BD6 /* LaunchScreen.storyboard */,
 				047FDCE926F0872D00066BD6 /* Info.plist */,
+				0415055426F9314B001AA01B /* GoogleService-Info.plist */,
 			);
 			path = "Big Bite";
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				047FDCE526F0872D00066BD6 /* Assets.xcassets in Resources */,
 				04EEF91026F3F128002BD50F /* BigDishCollectionViewCell.xib in Resources */,
 				04B8475D26F7DE0700ADEEAA /* BasketTableViewCell.xib in Resources */,
+				0415055526F9314B001AA01B /* GoogleService-Info.plist in Resources */,
 				047FDCE326F0872B00066BD6 /* Main.storyboard in Resources */,
 				04EEF91526F40864002BD50F /* LuckiestGuy-Regular.ttf in Resources */,
 			);

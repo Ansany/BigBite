@@ -39,16 +39,19 @@ class DishDetailViewController: UIViewController {
     @IBAction func placeOrderPressed(_ sender: UIButton) {
         dishOrder = .init(amount: dishStepper.value, dish: dish)
         
-        db.collection("DishDetail").addDocument(data: [
-            "amount": dishOrder.amount, "dishName":  dishOrder.dish.name,
-            "price": dishOrder.dish.price
-        ]) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Document successfully written!")
+        if let collectionName = Auth.auth().currentUser?.email {
+            db.collection(collectionName).addDocument(data: [ "Order" : [
+                "amount": dishOrder.amount, "dishName":  dishOrder.dish.name,
+                "price": dishOrder.dish.price]
+            ]) { err in
+                if let err = err {
+                    print("Error writing document: \(err)")
+                } else {
+                    print("Document successfully written!")
+                }
             }
         }
+        
         
         }
     

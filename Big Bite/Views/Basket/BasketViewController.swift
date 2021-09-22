@@ -19,6 +19,7 @@ class BasketViewController: UIViewController {
     @IBOutlet weak var commentTextField: UITextField!
     
     let db = Firestore.firestore()
+    let loginVC = LoginViewController()
     
     var orderList: [Order] = []
     
@@ -43,26 +44,33 @@ class BasketViewController: UIViewController {
     
     func setupOrders() {
         orderList = []
-        db.collection("DishDetail").getDocuments { (querySnapshot, error) in
-            if let e = error {
-                print("There was an issue retrieving data from Firedtore\(e)")
-            } else {
-                if let snapshotDocuments = querySnapshot?.documents {
-                    for doc in snapshotDocuments {
-                        let data = doc.data()
-                        let name = data["dishName"] as! String
-                        let amount = data["amount"] as! Double
-                        let price = data["price"] as! Double
-                        let newOrder = Order(amount: amount, dish: .init(id: nil, name: name, description: nil, image: nil, price: price))
-                        self.orderList.append(newOrder)
-                        
-                        DispatchQueue.main.async {
-                            self.basketTableView.reloadData()
+        
+        
+        if let collectionName = Auth.auth().currentUser?.email {
+            db.collection(collectionName).getDocuments { (querySnapshot, error) in
+                if let e = error {
+                    print("There was an issue retrieving data from Firedtore\(e)")
+                } else {
+                    if let snapshotDocuments = querySnapshot?.documents {
+                        for doc in snapshotDocuments {
+                            let data = doc.data()
+                            let order = data["Order"] as! [String : Any]
+                            let name = order["dishName"] as! String
+                            let amount = order["amount"] as! Double
+                            let price = order["price"] as! Double
+                            let newOrder = Order(amount: amount, dish: .init(id: nil, name: name, description: nil, image: nil, price: price))
+                            self.orderList.append(newOrder)
+                            
+                            DispatchQueue.main.async {
+                                self.basketTableView.reloadData()
+                            }
                         }
                     }
                 }
             }
         }
+
+        
     }
 }
 

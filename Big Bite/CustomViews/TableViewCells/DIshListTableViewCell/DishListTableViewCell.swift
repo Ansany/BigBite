@@ -38,8 +38,7 @@ class DishListTableViewCell: UITableViewCell {
         dish = .init(id: nil, name: dishListTitleLabel.text!, description: nil, image: nil, price: totalCellPrice)
         dishListOrder = .init(amount: stepperValue, dish: dish)
         
-        
-        db.collection("DishDetail").addDocument(data: [
+        db.collection("Order").addDocument(data: [
             "amount": stepperValue, "dishName":  dishListOrder.dish.name,
             "price": dishListOrder.dish.price
         ]) { err in

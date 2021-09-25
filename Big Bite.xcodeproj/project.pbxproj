@@ -15,7 +15,7 @@
 		0415055326F92A28001AA01B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415055226F92A28001AA01B /* NetworkService.swift */; };
 		0415055526F9314B001AA01B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0415055426F9314B001AA01B /* GoogleService-Info.plist */; };
 		0415055B26FAA2B1001AA01B /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415055A26FAA2B1001AA01B /* RegistrationViewController.swift */; };
-		0415055D26FABB0D001AA01B /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415055C26FABB0D001AA01B /* K.swift */; };
+		0415055D26FABB0D001AA01B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415055C26FABB0D001AA01B /* Constants.swift */; };
 		0415055F26FABFBA001AA01B /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415055E26FABFBA001AA01B /* AccountViewController.swift */; };
 		047FDCDC26F0872B00066BD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCDB26F0872B00066BD6 /* AppDelegate.swift */; };
 		047FDCDE26F0872B00066BD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCDD26F0872B00066BD6 /* SceneDelegate.swift */; };
@@ -55,7 +55,7 @@
 		0415055226F92A28001AA01B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		0415055426F9314B001AA01B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0415055A26FAA2B1001AA01B /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		0415055C26FABB0D001AA01B /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		0415055C26FABB0D001AA01B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0415055E26FABFBA001AA01B /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		047FDCD826F0872B00066BD6 /* Big Bite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Big Bite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		047FDCDB26F0872B00066BD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 				047FDCEF26F09EE300066BD6 /* Model */,
 				047FDCDB26F0872B00066BD6 /* AppDelegate.swift */,
 				047FDCDD26F0872B00066BD6 /* SceneDelegate.swift */,
-				0415055C26FABB0D001AA01B /* K.swift */,
+				0415055C26FABB0D001AA01B /* Constants.swift */,
 				047FDCE126F0872B00066BD6 /* Main.storyboard */,
 				04EEF91326F4084C002BD50F /* Fonts */,
 				047FDCE426F0872D00066BD6 /* Assets.xcassets */,
@@ -482,7 +482,7 @@
 				047FDCF826F0A1FF00066BD6 /* UIView+Ext.swift in Sources */,
 				04EEF90F26F3F128002BD50F /* BigDishCollectionViewCell.swift in Sources */,
 				047FDCDC26F0872B00066BD6 /* AppDelegate.swift in Sources */,
-				0415055D26FABB0D001AA01B /* K.swift in Sources */,
+				0415055D26FABB0D001AA01B /* Constants.swift in Sources */,
 				04B8475C26F7DE0700ADEEAA /* BasketTableViewCell.swift in Sources */,
 				047FDCDE26F0872B00066BD6 /* SceneDelegate.swift in Sources */,
 				04B8475626F648D700ADEEAA /* DishDetailViewController.swift in Sources */,

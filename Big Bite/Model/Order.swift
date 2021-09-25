@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Order {
+public struct Order: Codable {
     let amount: Double
     let dish: Dish
 }

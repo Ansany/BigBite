@@ -16,23 +16,23 @@ class HomeViewController: UIViewController {
     
     var categories: [DishCategory] = [
         .init(id: "id1", name: "Burgers", image: "BurgerImage"),
-        .init(id: "id2", name: "Pizza", image: "BurgerImage"),
-        .init(id: "id3", name: "Sushi", image: "BurgerImage"),
+        .init(id: "id2", name: "Pizza", image: "pizza"),
+        .init(id: "id3", name: "Sushi", image: "Sushi"),
         .init(id: "id3", name: "Salads", image: "BurgerImage"),
         .init(id: "id3", name: "Drinks", image: "BurgerImage")
     ]
     
     var dish: [Dish] = [
-        .init(id: "id1", name: "Margaritta", description: "This is the best pizza in the world", image: "Pizza", price: 8.4532),
-        .init(id: "id2 ", name: "Pepperoni", description: "This is the best pizza in the world", image: "Pizza",price: 12.0023),
-        .init(id: "id3", name: "Terolla", description: "This is the best pizza in the world", image: "Pizza", price: 14),
-        .init(id: "id4", name: "Likonia", description: "This is the best pizza in the world", image: "Pizza", price: 8.4324)
+        .init(id: "id1", name: "Margaritta", description: "This is the best pizza in the world", image: "pizza", price: 8.4),
+        .init(id: "id1", name: "Black Star", description: "This is the best burger in the world", image: "BurgerImage", price: K.DishPrice.Burgers.blackStar),
+        .init(id: "id3", name: "Terolla", description: "This is the best pizza in the world", image: "pizza", price: 14),
+        .init(id: "id4", name: "Likonia", description: "This is the best pizza in the world", image: "pizza", price: 8.4)
     ]
     
     var glutenFreeDishes: [Dish] = [
-        .init(id: "id1", name: "Glazed Salmon", description: "Gluten Free Asian Glazed Salmon with Edamame Rice", image: "1222", price: 18),
-        .init(id: "id2", name: "Tokkei", description: "Gluten Free Asian Glazed Salmon with Edamame Rice", image: "1222", price: 12.8),
-        .init(id: "id3", name: "Larendy", description: "Gluten Free Asian Glazed Salmon with Edamame Rice", image: "1222", price: 6.1)
+        .init(id: "id1", name: "Glazed Salmon", description: "Gluten Free Asian Glazed Salmon with Edamame Rice", image: "BurgerImage", price: 18),
+        .init(id: "id2", name: "Tokkei", description: "Gluten Free Asian Glazed Salmon with Edamame Rice", image: "Sushi", price: 12.8),
+        .init(id: "id3", name: "Larendy", description: "Gluten Free Asian Glazed Salmon with Edamame Rice", image: "pizza", price: 6.1)
     ]
     
     

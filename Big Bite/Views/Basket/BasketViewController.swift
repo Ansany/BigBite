@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Firebase
 
 class BasketViewController: UIViewController {
     
@@ -18,17 +17,14 @@ class BasketViewController: UIViewController {
     @IBOutlet weak var adressTextField: UITextField!
     @IBOutlet weak var commentTextField: UITextField!
     
-    let db = Firestore.firestore()
     let loginVC = LoginViewController()
     
-    var orderList: [Order] = []
+    static var orderList: [Order] = []
+    var totalPriceValue: Double = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         registerCells()
-        print(orderList)
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,48 +38,34 @@ class BasketViewController: UIViewController {
         basketTableView.register(UINib(nibName: BasketTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: BasketTableViewCell.identifier)
     }
     
-    func setupOrders() {
-        orderList = []
-        
-        
-        if let collectionName = Auth.auth().currentUser?.email {
-            db.collection(collectionName).getDocuments { (querySnapshot, error) in
-                if let e = error {
-                    print("There was an issue retrieving data from Firedtore\(e)")
-                } else {
-                    if let snapshotDocuments = querySnapshot?.documents {
-                        for doc in snapshotDocuments {
-                            let data = doc.data()
-                            let order = data["Order"] as! [String : Any]
-                            let name = order["dishName"] as! String
-                            let amount = order["amount"] as! Double
-                            let price = order["price"] as! Double
-                            let newOrder = Order(amount: amount, dish: .init(id: nil, name: name, description: nil, image: nil, price: price))
-                            self.orderList.append(newOrder)
-                            
-                            DispatchQueue.main.async {
-                                self.basketTableView.reloadData()
-                            }
-                        }
-                    }
-                }
-            }
+    func updateTotalPrice() {
+        totalPriceValue = 0
+        for order in BasketViewController.orderList {
+            totalPriceValue += (order.amount * order.dish.price)
         }
-
-        
+        totalPrice.text = String(format: "$ %.2f", totalPriceValue)
     }
+    
+    func setupOrders() {
+        DispatchQueue.main.async {
+            self.updateTotalPrice()
+            self.basketTableView.reloadData()
+        }
+    }
+
+    
 }
 
 //MARK: - UITableViewDataSource, UITableViewDelegate
 
 extension BasketViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return orderList.count
+        return BasketViewController.orderList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BasketTableViewCell.identifier) as! BasketTableViewCell
-        cell.setup(orderList[indexPath.row])
+        cell.setup(BasketViewController.orderList[indexPath.row])
         return cell
     }
     

@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Dish {
-    let id: String?
+public struct Dish: Codable {
+    let id: String
     let name: String
     let description: String?
-    let image: String?
+    let image: String
     let price: Double
     
     var formatedPrice: String {

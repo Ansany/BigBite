@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Firebase
 
 class DishDetailViewController: UIViewController {
 
@@ -22,7 +21,7 @@ class DishDetailViewController: UIViewController {
     var items = 1
         
     var dishOrder: Order!
-    let db = Firestore.firestore()
+    var numberOfOrder = Int.random(in: 1...50)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,29 +29,15 @@ class DishDetailViewController: UIViewController {
     }
 
     private func setup() {
-        dishImageView.image = UIImage(named: "GlutenFree")
+        dishImageView.image = UIImage(named: dish.image)
         titleLabel.text = dish.name
         priceLabel.text = dish.formatedPrice
         descriptionLabel.text = dish.description
     }
     
     @IBAction func placeOrderPressed(_ sender: UIButton) {
-        dishOrder = .init(amount: dishStepper.value, dish: dish)
-        
-        if let collectionName = Auth.auth().currentUser?.email {
-            db.collection(collectionName).addDocument(data: [ "Order" : [
-                "amount": dishOrder.amount, "dishName":  dishOrder.dish.name,
-                "price": dishOrder.dish.price]
-            ]) { err in
-                if let err = err {
-                    print("Error writing document: \(err)")
-                } else {
-                    print("Document successfully written!")
-                }
-            }
-        }
-        
-        
+        dishOrder = Order(amount: dishStepper.value, dish: dish)
+        BasketViewController.orderList.append(dishOrder)
         }
     
     @IBAction func dishStepperPressed(_ sender: UIStepper) {

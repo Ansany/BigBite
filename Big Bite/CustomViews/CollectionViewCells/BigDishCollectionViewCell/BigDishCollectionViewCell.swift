@@ -18,7 +18,7 @@ class BigDishCollectionViewCell: UICollectionViewCell {
     
     func setup(_ category: Dish) {
         dishTitleLabel.text = category.name
-        dishImage.image = UIImage(named: "pizza")
+        dishImage.image = UIImage(named: category.image)
         dishDescriptionLabel.text = category.description
         dishPriceLabel.text = category.formatedPrice
     }

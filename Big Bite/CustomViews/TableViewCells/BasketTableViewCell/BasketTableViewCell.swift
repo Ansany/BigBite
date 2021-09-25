@@ -23,7 +23,7 @@ class BasketTableViewCell: UITableViewCell {
     
     
     func setup(_ order: Order) {
-        basketCellImage.image = UIImage(named: "pizza")
+        basketCellImage.image = UIImage(named: order.dish.image)
         basketCellPriceLabel.text = String(format: "$ %.2f", (order.dish.price * order.amount))
         basketCellNameLabel.text = order.dish.name
         basketCellStepper.value = order.amount
@@ -35,13 +35,20 @@ class BasketTableViewCell: UITableViewCell {
 //        super.setSelected(selected, animated: animated)
 //
 //    }
+    func updateStepper() {
+        
+    }
     
-    
+    func deleteDish() {
+       
+    }
+
     @IBAction func basketCellStepperPressed(_ sender: UIStepper) {
         stepperValue = sender.value
         basketCellCountLabel.text = String(format: "%.0f", stepperValue)
         let price = totalCellPrice * stepperValue
         basketCellPriceLabel.text = String(format: "$ %.2f", price)
+        print("Stepper Value in BasketViewTableCell = \(stepperValue)")
         }
     
 }

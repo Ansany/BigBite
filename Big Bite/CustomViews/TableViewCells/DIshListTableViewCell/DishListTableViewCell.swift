@@ -24,6 +24,7 @@ class DishListTableViewCell: UITableViewCell {
     var dish: Dish!
     var dishListOrder: Order!
     var dishID = ""
+    var descriptionDish: String? = ""
     var imageString = ""
     
     
@@ -34,11 +35,12 @@ class DishListTableViewCell: UITableViewCell {
         totalCellPrice = dish.price
         dishID = dish.id
         imageString = dish.image
+        descriptionDish = dish.description ?? ""
     }
     
     @IBAction func addPressed(_ sender: UIButton) {
-        dish = .init(id: dishID, name: dishListTitleLabel.text!, description: nil, image: imageString, price: totalCellPrice)
-        dishListOrder = .init(amount: stepperValue, dish: dish)
+        dish = .init(id: dishID, name: dishListTitleLabel.text!, description: descriptionDish, image: imageString, price: totalCellPrice)
+        dishListOrder = .init(amount: stepperValue, totalPrice: (stepperValue*dish.price), dish: dish)
         BasketViewController.orderList.append(dishListOrder)
     }
     

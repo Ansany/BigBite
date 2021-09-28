@@ -9,37 +9,16 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var popularCollectionView: UICollectionView!
     @IBOutlet weak var glutenFreeCollectionView: UICollectionView!
     
-    var categories: [DishCategory] = [
-        .init(id: "id1", name: "Burgers", image: "BurgerImage"),
-        .init(id: "id2", name: "Pizza", image: "pizza"),
-        .init(id: "id3", name: "Sushi", image: "Sushi"),
-        .init(id: "id3", name: "Salads", image: "BurgerImage"),
-        .init(id: "id3", name: "Drinks", image: "BurgerImage")
-    ]
-    
-    var dish: [Dish] = [
-        .init(id: "id1", name: "Margaritta", description: "This is the best pizza in the world", image: "pizza", price: 8.4),
-        .init(id: "id1", name: "Black Star", description: "This is the best burger in the world", image: "BurgerImage", price: K.DishPrice.Burgers.blackStar),
-        .init(id: "id3", name: "Terolla", description: "This is the best pizza in the world", image: "pizza", price: 14),
-        .init(id: "id4", name: "Likonia", description: "This is the best pizza in the world", image: "pizza", price: 8.4)
-    ]
-    
-    var glutenFreeDishes: [Dish] = [
-        .init(id: "id1", name: "Glazed Salmon", description: "Gluten Free Asian Glazed Salmon with Edamame Rice", image: "BurgerImage", price: 18),
-        .init(id: "id2", name: "Tokkei", description: "Gluten Free Asian Glazed Salmon with Edamame Rice", image: "Sushi", price: 12.8),
-        .init(id: "id3", name: "Larendy", description: "Gluten Free Asian Glazed Salmon with Edamame Rice", image: "pizza", price: 6.1)
-    ]
-    
+    var categories: [DishCategory] = [Menu.Categories.burgerCategory, Menu.Categories.pizzaCategory, Menu.Categories.sushiCategory, Menu.Categories.saladCategory, Menu.Categories.drinkCategory]
+    var popularDish: [Dish] = [Menu.Pizza.californiaStyle, Menu.Burgers.blackStar, Menu.Sushi.unagiNigiri, Menu.Pizza.pepperoni]
+    var glutenFreeDishes: [Dish] = [Menu.GlutenFree.glazedSalmon, Menu.GlutenFree.larendy, Menu.GlutenFree.skillet]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         registerCells()
     }
     
@@ -61,7 +40,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case categoryCollectionView:
             return categories.count
         case popularCollectionView:
-            return dish.count
+            return popularDish.count
         case glutenFreeCollectionView:
             return glutenFreeDishes.count
         default:
@@ -80,7 +59,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case popularCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BigDishCollectionViewCell.identifier, for: indexPath)
                 as! BigDishCollectionViewCell
-            cell.setup(dish[indexPath.row])
+            cell.setup(popularDish[indexPath.row])
             return cell
         case glutenFreeCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GlutenFreeCollectionViewCell.identifier, for: indexPath) as! GlutenFreeCollectionViewCell
@@ -95,10 +74,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if collectionView == categoryCollectionView {
             let controller = ListDishesViewController.instantiate()
             controller.category = categories[indexPath.row]
-            tabBarController?.present(controller, animated: true, completion: nil)
+            navigationController?.pushViewController(controller, animated: true)
         } else {
             let controller = DishDetailViewController.instantiate()
-            controller.dish = collectionView == popularCollectionView ? dish[indexPath.row] : glutenFreeDishes[indexPath.row]
+            controller.dish = collectionView == popularCollectionView ? popularDish[indexPath.row] : glutenFreeDishes[indexPath.row]
             tabBarController?.present(controller, animated: true, completion: nil)
         }
     }

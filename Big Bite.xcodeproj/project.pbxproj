@@ -17,6 +17,8 @@
 		0415055B26FAA2B1001AA01B /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415055A26FAA2B1001AA01B /* RegistrationViewController.swift */; };
 		0415055D26FABB0D001AA01B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415055C26FABB0D001AA01B /* Constants.swift */; };
 		0415055F26FABFBA001AA01B /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415055E26FABFBA001AA01B /* AccountViewController.swift */; };
+		0415056127014738001AA01B /* MenuConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415056027014738001AA01B /* MenuConstants.swift */; };
+		0415056527036950001AA01B /* UserDefaults+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415056427036950001AA01B /* UserDefaults+Extention.swift */; };
 		047FDCDC26F0872B00066BD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCDB26F0872B00066BD6 /* AppDelegate.swift */; };
 		047FDCDE26F0872B00066BD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCDD26F0872B00066BD6 /* SceneDelegate.swift */; };
 		047FDCE326F0872B00066BD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047FDCE126F0872B00066BD6 /* Main.storyboard */; };
@@ -57,6 +59,8 @@
 		0415055A26FAA2B1001AA01B /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		0415055C26FABB0D001AA01B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0415055E26FABFBA001AA01B /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		0415056027014738001AA01B /* MenuConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuConstants.swift; sourceTree = "<group>"; };
+		0415056427036950001AA01B /* UserDefaults+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extention.swift"; sourceTree = "<group>"; };
 		047FDCD826F0872B00066BD6 /* Big Bite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Big Bite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		047FDCDB26F0872B00066BD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		047FDCDD26F0872B00066BD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 				047FDCDB26F0872B00066BD6 /* AppDelegate.swift */,
 				047FDCDD26F0872B00066BD6 /* SceneDelegate.swift */,
 				0415055C26FABB0D001AA01B /* Constants.swift */,
+				0415056027014738001AA01B /* MenuConstants.swift */,
 				047FDCE126F0872B00066BD6 /* Main.storyboard */,
 				04EEF91326F4084C002BD50F /* Fonts */,
 				047FDCE426F0872D00066BD6 /* Assets.xcassets */,
@@ -226,6 +231,7 @@
 				047FDCF726F0A1FF00066BD6 /* UIView+Ext.swift */,
 				04EEF90526F2BB32002BD50F /* String+Extension.swift */,
 				04B8475726F64FD100ADEEAA /* UIViewController+Extention.swift */,
+				0415056427036950001AA01B /* UserDefaults+Extention.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -492,6 +498,8 @@
 				04EEF90426F2B7B4002BD50F /* DishCategory.swift in Sources */,
 				0415055B26FAA2B1001AA01B /* RegistrationViewController.swift in Sources */,
 				04EEF90626F2BB32002BD50F /* String+Extension.swift in Sources */,
+				0415056127014738001AA01B /* MenuConstants.swift in Sources */,
+				0415056527036950001AA01B /* UserDefaults+Extention.swift in Sources */,
 				04EEF90B26F3EBA8002BD50F /* CardView.swift in Sources */,
 				04EEF91226F3F8DE002BD50F /* Dish.swift in Sources */,
 				047FDCFC26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift in Sources */,

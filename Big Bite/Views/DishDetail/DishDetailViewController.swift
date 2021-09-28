@@ -36,7 +36,7 @@ class DishDetailViewController: UIViewController {
     }
     
     @IBAction func placeOrderPressed(_ sender: UIButton) {
-        dishOrder = Order(amount: dishStepper.value, dish: dish)
+        dishOrder = Order(amount: dishStepper.value, totalPrice: (dishStepper.value * dish.price), dish: dish)
         BasketViewController.orderList.append(dishOrder)
         }
     

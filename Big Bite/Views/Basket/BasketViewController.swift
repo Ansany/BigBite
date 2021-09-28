@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class BasketViewController: UIViewController {
     
@@ -16,11 +17,10 @@ class BasketViewController: UIViewController {
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var adressTextField: UITextField!
     @IBOutlet weak var commentTextField: UITextField!
-    
-    let loginVC = LoginViewController()
-    
+        
     static var orderList: [Order] = []
-    var totalPriceValue: Double = 0
+    static var totalPriceValue: Double = 0
+    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +32,23 @@ class BasketViewController: UIViewController {
     }
     
     @IBAction func orderPressed(_ sender: UIButton) {
+
+        if let collectionName = Auth.auth().currentUser?.email {
+            for order in BasketViewController.orderList {
+                db.collection(collectionName).addDocument(data: ["Amount": order.amount, "DishName": order.dish.name, "TotalPrice": order.totalPrice, "Date": Date().timeIntervalSince1970]) { err in
+                    if let err = err {
+                        print("Error adding document: \(err)")
+                    } else {
+                        print("Document was added")
+                    }
+                }
+            }
+            BasketViewController.orderList = []
+            setupOrders()
+        } else {
+            print("Problems with firebase")
+        }
+        
     }
     
     private func registerCells() {
@@ -39,11 +56,11 @@ class BasketViewController: UIViewController {
     }
     
     func updateTotalPrice() {
-        totalPriceValue = 0
+        BasketViewController.totalPriceValue = 0
         for order in BasketViewController.orderList {
-            totalPriceValue += (order.amount * order.dish.price)
+            BasketViewController.totalPriceValue += order.totalPrice
         }
-        totalPrice.text = String(format: "$ %.2f", totalPriceValue)
+        totalPrice.text = String(format: "$ %.2f", BasketViewController.totalPriceValue)
     }
     
     func setupOrders() {
@@ -53,7 +70,6 @@ class BasketViewController: UIViewController {
         }
     }
 
-    
 }
 
 //MARK: - UITableViewDataSource, UITableViewDelegate
@@ -69,6 +85,21 @@ extension BasketViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            tableView.beginUpdates()
+            BasketViewController.orderList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.endUpdates()
+            updateTotalPrice()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
+    
 }
-
-

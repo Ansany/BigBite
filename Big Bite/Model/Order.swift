@@ -7,7 +7,8 @@
 
 import Foundation
 
-public struct Order: Codable {
-    let amount: Double
+struct Order {
+    var amount: Double
+    var totalPrice: Double
     let dish: Dish
 }

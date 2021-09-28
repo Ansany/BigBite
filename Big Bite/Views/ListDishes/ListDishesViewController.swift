@@ -14,38 +14,16 @@ class ListDishesViewController: UIViewController {
     
     var category: DishCategory!
     
-    var burgersCategory: [Dish] = [
-        .init(id: "id1", name: "Black Star", description: nil, image: "BurgerImage", price: K.DishPrice.Burgers.blackStar),
-        .init(id: "id2 ", name: "Falconi", description: nil, image: "BurgerImage",price: K.DishPrice.Burgers.falconi),
-        .init(id: "id3", name: "Smokey Burger", description: nil, image: "BurgerImage", price: K.DishPrice.Burgers.smokeyBurger),
-        .init(id: "id4", name: "Big Mac", description: nil, image: "BurgerImage", price: K.DishPrice.Burgers.bigMac)
-    ]
-    var pizzaCategory: [Dish] = [
-        .init(id: "id5", name: "Margaritta", description: nil, image: "pizza", price: 7.20),
-        .init(id: "id6", name: "Pepperoni", description: nil, image: "pizza", price: 9.45),
-        .init(id: "id7", name: "Buffalo", description: nil, image: "pizza", price: 11.70)
-    ]
-    var sushiCategory: [Dish] = [
-        .init(id: "id8", name: "Unagi-Maki", description: nil, image: "Sushi", price: 5),
-        .init(id: "id9", name: "Filadelfia", description: nil, image: "Sushi", price: 7.2),
-        .init(id: "id10", name: "Avakado", description: nil, image: "Sushi", price: 14.70)
-    ]
-    var saladsCategory: [Dish] = [
-        .init(id: "id8", name: "Cesar", description: nil, image: "pizza", price: 6.1),
-        .init(id: "id9", name: "Olivie", description: nil, image: "pizza", price: 4.6),
-    ]
-    var drinksCategory: [Dish] = [
-        .init(id: "id10", name: "Cola", description: nil, image: "pizza", price: 2),
-        .init(id: "id11", name: "Sprite", description: nil, image: "pizza", price: 2),
-        .init(id: "id12", name: "Fanta", description: nil, image: "pizza", price: 2)
-    ]
+    var burgersCategory: [Dish] = [Menu.Burgers.blackStar, Menu.Burgers.falconi, Menu.Burgers.lucien, Menu.Burgers.macRow, Menu.Burgers.smokey]
+    var pizzaCategory: [Dish] = [Menu.Pizza.californiaStyle, Menu.Pizza.greekStyle, Menu.Pizza.margherita, Menu.Pizza.pepperoni]
+    var sushiCategory: [Dish] = [Menu.Sushi.makizushi, Menu.Sushi.unagiNigiri, Menu.Sushi.uramaki]
+    var saladsCategory: [Dish] = [Menu.Salads.blackBean, Menu.Salads.caesar, Menu.Salads.olivier]
+    var drinksCategory: [Dish] = [Menu.Drinks.cola, Menu.Drinks.fanta, Menu.Drinks.sprite, Menu.Drinks.berryJuice, Menu.Drinks.water]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = category.name
         registerCells()
-        categoryNameLabel.text = category.name
-
     }
     
     private func registerCells() {
@@ -100,7 +78,31 @@ extension ListDishesViewController: UITableViewDataSource, UITableViewDelegate {
         default:
             return UITableViewCell()
         }
+    }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if category.name == "Burgers" {
+            let controller = DishDetailViewController.instantiate()
+            controller.dish = burgersCategory[indexPath.row]
+            tabBarController?.present(controller, animated: true, completion: nil)
+        } else if category.name == "Pizza"{
+            let controller = DishDetailViewController.instantiate()
+            controller.dish = pizzaCategory[indexPath.row]
+            tabBarController?.present(controller, animated: true, completion: nil)
+        } else if category.name == "Sushi"{
+            let controller = DishDetailViewController.instantiate()
+            controller.dish = sushiCategory[indexPath.row]
+            tabBarController?.present(controller, animated: true, completion: nil)
+        } else if category.name == "Salads"{
+            let controller = DishDetailViewController.instantiate()
+            controller.dish = saladsCategory[indexPath.row]
+            tabBarController?.present(controller, animated: true, completion: nil)
+        } else {
+            let controller = DishDetailViewController.instantiate()
+            controller.dish = drinksCategory[indexPath.row]
+            tabBarController?.present(controller, animated: true, completion: nil)
+        }
+    }
     
-}
 }

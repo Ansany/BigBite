@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qRm-JT-4ft">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -544,6 +545,9 @@
                                                 <state key="normal" title="promo code">
                                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="promoPressed:" destination="bHQ-0k-ZDY" eventType="touchUpInside" id="wsC-Ep-A07"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total price:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Lj-pU-qil">
                                                 <rect key="frame" x="134" y="0.0" width="144" height="45"/>
@@ -607,6 +611,7 @@
                     <navigationItem key="navigationItem" title="Big Basket" id="nyk-eU-ez7"/>
                     <connections>
                         <outlet property="basketTableView" destination="7w3-u6-Hnr" id="7pF-rx-AMK"/>
+                        <outlet property="promoButton" destination="Nj9-1q-t9A" id="sCZ-i3-rTC"/>
                         <outlet property="totalPrice" destination="3py-hE-2uC" id="JPV-wC-fpt"/>
                     </connections>
                 </viewController>
@@ -680,6 +685,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="loginPressed:" destination="Z4T-w6-rSr" eventType="touchUpInside" id="3kO-Vj-3jJ"/>
+                                            <segue destination="mos-mg-rHk" kind="show" id="Lqp-7i-JVs"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J65-iO-cPy">
@@ -720,23 +726,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BigBiteLogo" translatesAutoresizingMaskIntoConstraints="NO" id="gZj-hQ-zYS">
-                                <rect key="frame" x="20" y="496" width="374" height="400"/>
+                                <rect key="frame" x="105" y="561" width="204" height="204"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="204" id="FR8-0N-6bs"/>
+                                    <constraint firstAttribute="width" constant="204" id="Xho-Xl-BTj"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PBi-tA-Dwn"/>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="PBi-tA-Dwn" firstAttribute="trailing" secondItem="gZj-hQ-zYS" secondAttribute="trailing" constant="105" id="6l3-TJ-cFe"/>
                             <constraint firstItem="spb-0v-7OM" firstAttribute="top" secondItem="Ke8-0e-N7K" secondAttribute="bottom" constant="25" id="ICc-qi-mkK"/>
-                            <constraint firstItem="PBi-tA-Dwn" firstAttribute="trailing" secondItem="gZj-hQ-zYS" secondAttribute="trailing" constant="20" id="OHu-zV-FJ2"/>
-                            <constraint firstAttribute="bottom" secondItem="gZj-hQ-zYS" secondAttribute="bottom" id="OT8-Uc-7ok"/>
                             <constraint firstItem="Ke8-0e-N7K" firstAttribute="top" secondItem="PBi-tA-Dwn" secondAttribute="top" constant="30" id="P5C-tU-UZr"/>
                             <constraint firstItem="Ke8-0e-N7K" firstAttribute="leading" secondItem="PBi-tA-Dwn" secondAttribute="leading" constant="45" id="V59-Rg-YLm"/>
+                            <constraint firstItem="PBi-tA-Dwn" firstAttribute="bottom" secondItem="gZj-hQ-zYS" secondAttribute="bottom" constant="48" id="XBf-Tq-zs0"/>
+                            <constraint firstItem="gZj-hQ-zYS" firstAttribute="leading" secondItem="PBi-tA-Dwn" secondAttribute="leading" constant="105" id="bWg-ST-mNO"/>
                             <constraint firstItem="spb-0v-7OM" firstAttribute="centerX" secondItem="5Tw-dq-bwq" secondAttribute="centerX" id="jt7-ER-tq9"/>
                             <constraint firstItem="spb-0v-7OM" firstAttribute="leading" secondItem="PBi-tA-Dwn" secondAttribute="leading" constant="60" id="kEF-KU-OpA"/>
                             <constraint firstItem="PBi-tA-Dwn" firstAttribute="trailing" secondItem="Ke8-0e-N7K" secondAttribute="trailing" constant="45" id="mCe-U9-FJ5"/>
                             <constraint firstItem="PBi-tA-Dwn" firstAttribute="trailing" secondItem="spb-0v-7OM" secondAttribute="trailing" constant="60" id="mHf-v3-zRF"/>
                             <constraint firstItem="Ke8-0e-N7K" firstAttribute="centerX" secondItem="5Tw-dq-bwq" secondAttribute="centerX" id="w1G-Jn-gSC"/>
-                            <constraint firstItem="gZj-hQ-zYS" firstAttribute="leading" secondItem="PBi-tA-Dwn" secondAttribute="leading" constant="20" id="zYv-L8-BCR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Big Account" id="xWM-5o-Hzm"/>
@@ -748,7 +758,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wUA-DC-DDF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2267" y="2261"/>
+            <point key="canvasLocation" x="2267" y="1547"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="YtI-IT-JHF">
@@ -764,7 +774,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s2N-Jo-3QH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2268" y="1547"/>
+            <point key="canvasLocation" x="2267" y="2261"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="acl-c9-NCY">
@@ -850,19 +860,23 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BigBiteLogo" translatesAutoresizingMaskIntoConstraints="NO" id="pSL-WK-3Fx">
-                                <rect key="frame" x="20" y="426" width="374" height="400"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BigBiteLogo" translatesAutoresizingMaskIntoConstraints="NO" id="uE2-jC-zt1">
+                                <rect key="frame" x="105" y="545" width="204" height="204"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="204" id="U97-aA-cwv"/>
+                                    <constraint firstAttribute="width" constant="204" id="juw-1g-eKl"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qqp-JP-cZA"/>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="uE2-jC-zt1" firstAttribute="leading" secondItem="qqp-JP-cZA" secondAttribute="leading" constant="105" id="B6A-JU-wXn"/>
+                            <constraint firstItem="qqp-JP-cZA" firstAttribute="bottom" secondItem="uE2-jC-zt1" secondAttribute="bottom" constant="59" id="Fam-Rs-lU2"/>
                             <constraint firstItem="qqp-JP-cZA" firstAttribute="trailing" secondItem="Ao2-pL-gvp" secondAttribute="trailing" constant="100" id="OtM-dc-0UG"/>
-                            <constraint firstAttribute="bottom" secondItem="pSL-WK-3Fx" secondAttribute="bottom" constant="16" id="PTb-Xz-ftQ"/>
                             <constraint firstItem="Ao2-pL-gvp" firstAttribute="leading" secondItem="qqp-JP-cZA" secondAttribute="leading" constant="100" id="YAO-x8-I6f"/>
-                            <constraint firstItem="qqp-JP-cZA" firstAttribute="trailing" secondItem="pSL-WK-3Fx" secondAttribute="trailing" constant="20" id="Z4z-EE-Wsw"/>
-                            <constraint firstItem="pSL-WK-3Fx" firstAttribute="leading" secondItem="qqp-JP-cZA" secondAttribute="leading" constant="20" id="apY-th-gn7"/>
                             <constraint firstItem="qqp-JP-cZA" firstAttribute="trailing" secondItem="JbO-Lh-kgc" secondAttribute="trailing" constant="45" id="mmb-Dx-kc1"/>
+                            <constraint firstItem="qqp-JP-cZA" firstAttribute="trailing" secondItem="uE2-jC-zt1" secondAttribute="trailing" constant="105" id="p5J-qN-Ddf"/>
                             <constraint firstItem="Ao2-pL-gvp" firstAttribute="top" secondItem="JbO-Lh-kgc" secondAttribute="bottom" constant="8" id="pQi-ce-slL"/>
                             <constraint firstItem="JbO-Lh-kgc" firstAttribute="leading" secondItem="qqp-JP-cZA" secondAttribute="leading" constant="45" id="rbM-oW-15h"/>
                             <constraint firstItem="JbO-Lh-kgc" firstAttribute="top" secondItem="qqp-JP-cZA" secondAttribute="top" constant="60" id="zI6-nW-8vH"/>
@@ -876,7 +890,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Rp-8U-Q1b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3075" y="2261"/>
+            <point key="canvasLocation" x="3122" y="1547"/>
         </scene>
         <!--Account-->
         <scene sceneID="kbS-YO-2L8">

@@ -10,17 +10,13 @@ import Firebase
 
 class RegistrationViewController: UIViewController {
 
-    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
     }
     
     @IBAction func signUpPressed(_ sender: UIButton) {

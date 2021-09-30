@@ -15,7 +15,6 @@
 		0415055326F92A28001AA01B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415055226F92A28001AA01B /* NetworkService.swift */; };
 		0415055526F9314B001AA01B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0415055426F9314B001AA01B /* GoogleService-Info.plist */; };
 		0415055B26FAA2B1001AA01B /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415055A26FAA2B1001AA01B /* RegistrationViewController.swift */; };
-		0415055D26FABB0D001AA01B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415055C26FABB0D001AA01B /* Constants.swift */; };
 		0415055F26FABFBA001AA01B /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415055E26FABFBA001AA01B /* AccountViewController.swift */; };
 		0415056127014738001AA01B /* MenuConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415056027014738001AA01B /* MenuConstants.swift */; };
 		0415056527036950001AA01B /* UserDefaults+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415056427036950001AA01B /* UserDefaults+Extention.swift */; };
@@ -25,7 +24,7 @@
 		047FDCE526F0872D00066BD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047FDCE426F0872D00066BD6 /* Assets.xcassets */; };
 		047FDCE826F0872D00066BD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047FDCE626F0872D00066BD6 /* LaunchScreen.storyboard */; };
 		047FDCF526F09F3C00066BD6 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCF426F09F3C00066BD6 /* OnboardingViewController.swift */; };
-		047FDCF826F0A1FF00066BD6 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCF726F0A1FF00066BD6 /* UIView+Ext.swift */; };
+		047FDCF826F0A1FF00066BD6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCF726F0A1FF00066BD6 /* UIView+Extension.swift */; };
 		047FDCFA26F0A30900066BD6 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCF926F0A30900066BD6 /* OnboardingSlide.swift */; };
 		047FDCFC26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCFB26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift */; };
 		04B8474E26F6316400ADEEAA /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8474D26F6316400ADEEAA /* BasketViewController.swift */; };
@@ -57,7 +56,6 @@
 		0415055226F92A28001AA01B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		0415055426F9314B001AA01B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0415055A26FAA2B1001AA01B /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		0415055C26FABB0D001AA01B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0415055E26FABFBA001AA01B /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		0415056027014738001AA01B /* MenuConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuConstants.swift; sourceTree = "<group>"; };
 		0415056427036950001AA01B /* UserDefaults+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extention.swift"; sourceTree = "<group>"; };
@@ -69,7 +67,7 @@
 		047FDCE726F0872D00066BD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		047FDCE926F0872D00066BD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		047FDCF426F09F3C00066BD6 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		047FDCF726F0A1FF00066BD6 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		047FDCF726F0A1FF00066BD6 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		047FDCF926F0A30900066BD6 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		047FDCFB26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		04B8474D26F6316400ADEEAA /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
@@ -170,7 +168,6 @@
 				047FDCEF26F09EE300066BD6 /* Model */,
 				047FDCDB26F0872B00066BD6 /* AppDelegate.swift */,
 				047FDCDD26F0872B00066BD6 /* SceneDelegate.swift */,
-				0415055C26FABB0D001AA01B /* Constants.swift */,
 				0415056027014738001AA01B /* MenuConstants.swift */,
 				047FDCE126F0872B00066BD6 /* Main.storyboard */,
 				04EEF91326F4084C002BD50F /* Fonts */,
@@ -228,7 +225,7 @@
 		047FDCF626F0A1D500066BD6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				047FDCF726F0A1FF00066BD6 /* UIView+Ext.swift */,
+				047FDCF726F0A1FF00066BD6 /* UIView+Extension.swift */,
 				04EEF90526F2BB32002BD50F /* String+Extension.swift */,
 				04B8475726F64FD100ADEEAA /* UIViewController+Extention.swift */,
 				0415056427036950001AA01B /* UserDefaults+Extention.swift */,
@@ -485,10 +482,9 @@
 				0415052326F82B73001AA01B /* Order.swift in Sources */,
 				04B8475126F6318000ADEEAA /* LoginViewController.swift in Sources */,
 				047FDCFA26F0A30900066BD6 /* OnboardingSlide.swift in Sources */,
-				047FDCF826F0A1FF00066BD6 /* UIView+Ext.swift in Sources */,
+				047FDCF826F0A1FF00066BD6 /* UIView+Extension.swift in Sources */,
 				04EEF90F26F3F128002BD50F /* BigDishCollectionViewCell.swift in Sources */,
 				047FDCDC26F0872B00066BD6 /* AppDelegate.swift in Sources */,
-				0415055D26FABB0D001AA01B /* Constants.swift in Sources */,
 				04B8475C26F7DE0700ADEEAA /* BasketTableViewCell.swift in Sources */,
 				047FDCDE26F0872B00066BD6 /* SceneDelegate.swift in Sources */,
 				04B8475626F648D700ADEEAA /* DishDetailViewController.swift in Sources */,
@@ -654,6 +650,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9WG2395BL6;
 				INFOPLIST_FILE = "Big Bite/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -674,6 +671,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9WG2395BL6;
 				INFOPLIST_FILE = "Big Bite/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

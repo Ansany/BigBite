@@ -36,15 +36,13 @@ class BasketViewController: UIViewController {
     
     @IBAction func orderPressed(_ sender: UIButton) {
         
-        setupInformationAlert(alertTitle: "Succes", alertMessage: "Your order has been sent, please expect delivery within 1 hour", actionTitle: "OK")
-    
-        if let collectionName = Auth.auth().currentUser?.email {
+        if let collectionName = Auth.auth().currentUser?.phoneNumber {
             for order in BasketViewController.orderList {
                 db.collection(collectionName).addDocument(data: ["Amount": order.amount, "DishName": order.dish.name, "TotalPrice": order.totalPrice, "Discount": promoIsAccept, "Date": Date().timeIntervalSince1970]) { err in
                     if let err = err {
                         print("Error adding document: \(err)")
                     } else {
-                        print("Document was added")
+                        self.setupInformationAlert(alertTitle: "Succes", alertMessage: "Your order has been sent, please expect delivery within 1 hour", actionTitle: "OK")
                     }
                 }
             }
@@ -110,16 +108,19 @@ class BasketViewController: UIViewController {
 extension BasketViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let noDataLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
-        
+       
         if BasketViewController.orderList.count == 0 {
-            noDataLabel.isHidden = false
-            noDataLabel.text = "Your basket is empty now. Please select some dishes to order."
-            noDataLabel.textColor = .black
-            noDataLabel.numberOfLines = 2
-            noDataLabel.backgroundColor = .white
-            noDataLabel.textAlignment = .center
-            tableView.backgroundView  = noDataLabel
-            tableView.separatorStyle  = .none
+            let seconds = 1.0
+            DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+                noDataLabel.isHidden = false
+                noDataLabel.text = "Your basket is empty now. Please select some dishes to order."
+                noDataLabel.textColor = .black
+                noDataLabel.numberOfLines = 2
+                noDataLabel.backgroundColor = .white
+                noDataLabel.textAlignment = .center
+                tableView.backgroundView  = noDataLabel
+                tableView.separatorStyle  = .none
+            }
             return 0
         } else {
             noDataLabel.backgroundColor = .clear

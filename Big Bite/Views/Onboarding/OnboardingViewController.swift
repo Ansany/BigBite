@@ -37,11 +37,18 @@ class OnboardingViewController: UIViewController {
     
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         if currentPage == slides.count - 1 {
-            let controller = storyboard?.instantiateViewController(identifier: "TabBarController") as! UITabBarController
+            
+            let controller = PhoneAuthViewController.instantiate()
             controller.modalPresentationStyle = .fullScreen
             controller.modalTransitionStyle = .coverVertical
             UserDefaults.standard.hasOnboarded = true
             present(controller, animated: true, completion: nil)
+            
+//            let controller = storyboard?.instantiateViewController(identifier: "TabBarController") as! UITabBarController
+//            controller.modalPresentationStyle = .fullScreen
+//            controller.modalTransitionStyle = .coverVertical
+//            UserDefaults.standard.hasOnboarded = true
+//            present(controller, animated: true, completion: nil)
         } else {
             currentPage += 1
             let indexPath = IndexPath(item: currentPage, section: 0)

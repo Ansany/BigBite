@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class AccountViewController: UIViewController {
 
@@ -16,7 +17,6 @@ class AccountViewController: UIViewController {
 
     }
     
-
-   
+      
 
 }

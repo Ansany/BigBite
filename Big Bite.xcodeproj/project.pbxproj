@@ -18,6 +18,9 @@
 		0415055F26FABFBA001AA01B /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415055E26FABFBA001AA01B /* AccountViewController.swift */; };
 		0415056127014738001AA01B /* MenuConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415056027014738001AA01B /* MenuConstants.swift */; };
 		0415056527036950001AA01B /* UserDefaults+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415056427036950001AA01B /* UserDefaults+Extention.swift */; };
+		041505692708B58F001AA01B /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041505682708B58F001AA01B /* AuthManager.swift */; };
+		0415056B2708B9BD001AA01B /* PhoneAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415056A2708B9BD001AA01B /* PhoneAuthViewController.swift */; };
+		0415056D2708BF5C001AA01B /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415056C2708BF5C001AA01B /* CodeViewController.swift */; };
 		047FDCDC26F0872B00066BD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCDB26F0872B00066BD6 /* AppDelegate.swift */; };
 		047FDCDE26F0872B00066BD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCDD26F0872B00066BD6 /* SceneDelegate.swift */; };
 		047FDCE326F0872B00066BD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047FDCE126F0872B00066BD6 /* Main.storyboard */; };
@@ -59,6 +62,9 @@
 		0415055E26FABFBA001AA01B /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		0415056027014738001AA01B /* MenuConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuConstants.swift; sourceTree = "<group>"; };
 		0415056427036950001AA01B /* UserDefaults+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extention.swift"; sourceTree = "<group>"; };
+		041505682708B58F001AA01B /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		0415056A2708B9BD001AA01B /* PhoneAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAuthViewController.swift; sourceTree = "<group>"; };
+		0415056C2708BF5C001AA01B /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
 		047FDCD826F0872B00066BD6 /* Big Bite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Big Bite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		047FDCDB26F0872B00066BD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		047FDCDD26F0872B00066BD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +172,7 @@
 				047FDCF126F09EFC00066BD6 /* CustomViews */,
 				047FDCF026F09EEF00066BD6 /* Views */,
 				047FDCEF26F09EE300066BD6 /* Model */,
+				041505682708B58F001AA01B /* AuthManager.swift */,
 				047FDCDB26F0872B00066BD6 /* AppDelegate.swift */,
 				047FDCDD26F0872B00066BD6 /* SceneDelegate.swift */,
 				0415056027014738001AA01B /* MenuConstants.swift */,
@@ -218,6 +225,8 @@
 			children = (
 				047FDCF426F09F3C00066BD6 /* OnboardingViewController.swift */,
 				047FDCFB26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift */,
+				0415056A2708B9BD001AA01B /* PhoneAuthViewController.swift */,
+				0415056C2708BF5C001AA01B /* CodeViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -474,9 +483,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B8475826F64FD100ADEEAA /* UIViewController+Extention.swift in Sources */,
+				041505692708B58F001AA01B /* AuthManager.swift in Sources */,
 				0415051D26F7FE88001AA01B /* DishListTableViewCell.swift in Sources */,
 				0415055F26FABFBA001AA01B /* AccountViewController.swift in Sources */,
 				0415055326F92A28001AA01B /* NetworkService.swift in Sources */,
+				0415056D2708BF5C001AA01B /* CodeViewController.swift in Sources */,
+				0415056B2708B9BD001AA01B /* PhoneAuthViewController.swift in Sources */,
 				04B8474E26F6316400ADEEAA /* BasketViewController.swift in Sources */,
 				04EEF90126F2960D002BD50F /* CategoryCollectionViewCell.swift in Sources */,
 				0415052326F82B73001AA01B /* Order.swift in Sources */,

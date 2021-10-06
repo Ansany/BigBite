@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import FirebaseAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -19,19 +18,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: scene)
-        var controller: UIViewController!
         
-        if Auth.auth().currentUser == nil {
-            controller = OnboardingViewController.instantiate()
-        } else {
-            print("catch user - \(Auth.auth().currentUser!.phoneNumber!)")
+        var controller: UIViewController!
+            
+        if UserDefaults.standard.hasOnboarded {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             controller = storyboard.instantiateViewController(identifier: "TabBarController") as! UITabBarController
+        } else {
+            controller = OnboardingViewController.instantiate()
         }
         window?.rootViewController = controller
         window?.makeKeyAndVisible()
-        
-        }
+    }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

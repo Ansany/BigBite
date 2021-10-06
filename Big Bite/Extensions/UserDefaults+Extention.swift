@@ -16,8 +16,7 @@ extension UserDefaults {
         get {
             bool(forKey: UserDefaultsKeys.hasOndoarded.rawValue)
         }
-        
-        set{
+        set {
             setValue(newValue, forKey: UserDefaultsKeys.hasOndoarded.rawValue)
         }
     }

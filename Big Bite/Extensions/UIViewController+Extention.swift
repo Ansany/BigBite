@@ -19,6 +19,7 @@ extension UIViewController {
     }
     
     func setupInformationAlert(alertTitle: String?, alertMessage: String?, actionTitle: String?) {
+        
         let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: actionTitle, style: UIAlertAction.Style.default, handler: nil))
         present(alert, animated: true, completion: nil)

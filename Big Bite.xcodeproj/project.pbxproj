@@ -14,13 +14,11 @@
 		0415052326F82B73001AA01B /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415052226F82B73001AA01B /* Order.swift */; };
 		0415055326F92A28001AA01B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415055226F92A28001AA01B /* NetworkService.swift */; };
 		0415055526F9314B001AA01B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0415055426F9314B001AA01B /* GoogleService-Info.plist */; };
-		0415055B26FAA2B1001AA01B /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415055A26FAA2B1001AA01B /* RegistrationViewController.swift */; };
 		0415055F26FABFBA001AA01B /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415055E26FABFBA001AA01B /* AccountViewController.swift */; };
 		0415056127014738001AA01B /* MenuConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415056027014738001AA01B /* MenuConstants.swift */; };
 		0415056527036950001AA01B /* UserDefaults+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415056427036950001AA01B /* UserDefaults+Extention.swift */; };
 		041505692708B58F001AA01B /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041505682708B58F001AA01B /* AuthManager.swift */; };
 		0415056B2708B9BD001AA01B /* PhoneAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415056A2708B9BD001AA01B /* PhoneAuthViewController.swift */; };
-		0415056D2708BF5C001AA01B /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0415056C2708BF5C001AA01B /* CodeViewController.swift */; };
 		047FDCDC26F0872B00066BD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCDB26F0872B00066BD6 /* AppDelegate.swift */; };
 		047FDCDE26F0872B00066BD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCDD26F0872B00066BD6 /* SceneDelegate.swift */; };
 		047FDCE326F0872B00066BD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047FDCE126F0872B00066BD6 /* Main.storyboard */; };
@@ -31,7 +29,6 @@
 		047FDCFA26F0A30900066BD6 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCF926F0A30900066BD6 /* OnboardingSlide.swift */; };
 		047FDCFC26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FDCFB26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift */; };
 		04B8474E26F6316400ADEEAA /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8474D26F6316400ADEEAA /* BasketViewController.swift */; };
-		04B8475126F6318000ADEEAA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8475026F6318000ADEEAA /* LoginViewController.swift */; };
 		04B8475626F648D700ADEEAA /* DishDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8475526F648D700ADEEAA /* DishDetailViewController.swift */; };
 		04B8475826F64FD100ADEEAA /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8475726F64FD100ADEEAA /* UIViewController+Extention.swift */; };
 		04B8475C26F7DE0700ADEEAA /* BasketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B8475A26F7DE0700ADEEAA /* BasketTableViewCell.swift */; };
@@ -58,13 +55,11 @@
 		0415052226F82B73001AA01B /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		0415055226F92A28001AA01B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		0415055426F9314B001AA01B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		0415055A26FAA2B1001AA01B /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		0415055E26FABFBA001AA01B /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		0415056027014738001AA01B /* MenuConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuConstants.swift; sourceTree = "<group>"; };
 		0415056427036950001AA01B /* UserDefaults+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extention.swift"; sourceTree = "<group>"; };
 		041505682708B58F001AA01B /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		0415056A2708B9BD001AA01B /* PhoneAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneAuthViewController.swift; sourceTree = "<group>"; };
-		0415056C2708BF5C001AA01B /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
 		047FDCD826F0872B00066BD6 /* Big Bite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Big Bite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		047FDCDB26F0872B00066BD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		047FDCDD26F0872B00066BD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,7 +72,6 @@
 		047FDCF926F0A30900066BD6 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		047FDCFB26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		04B8474D26F6316400ADEEAA /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
-		04B8475026F6318000ADEEAA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		04B8475526F648D700ADEEAA /* DishDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailViewController.swift; sourceTree = "<group>"; };
 		04B8475726F64FD100ADEEAA /* UIViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
 		04B8475A26F7DE0700ADEEAA /* BasketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTableViewCell.swift; sourceTree = "<group>"; };
@@ -225,8 +219,6 @@
 			children = (
 				047FDCF426F09F3C00066BD6 /* OnboardingViewController.swift */,
 				047FDCFB26F0A62B00066BD6 /* OnboardingCollectionViewCell.swift */,
-				0415056A2708B9BD001AA01B /* PhoneAuthViewController.swift */,
-				0415056C2708BF5C001AA01B /* CodeViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -253,9 +245,8 @@
 		04B8474C26F6313B00ADEEAA /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				04B8475026F6318000ADEEAA /* LoginViewController.swift */,
-				0415055A26FAA2B1001AA01B /* RegistrationViewController.swift */,
 				0415055E26FABFBA001AA01B /* AccountViewController.swift */,
+				0415056A2708B9BD001AA01B /* PhoneAuthViewController.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -487,12 +478,10 @@
 				0415051D26F7FE88001AA01B /* DishListTableViewCell.swift in Sources */,
 				0415055F26FABFBA001AA01B /* AccountViewController.swift in Sources */,
 				0415055326F92A28001AA01B /* NetworkService.swift in Sources */,
-				0415056D2708BF5C001AA01B /* CodeViewController.swift in Sources */,
 				0415056B2708B9BD001AA01B /* PhoneAuthViewController.swift in Sources */,
 				04B8474E26F6316400ADEEAA /* BasketViewController.swift in Sources */,
 				04EEF90126F2960D002BD50F /* CategoryCollectionViewCell.swift in Sources */,
 				0415052326F82B73001AA01B /* Order.swift in Sources */,
-				04B8475126F6318000ADEEAA /* LoginViewController.swift in Sources */,
 				047FDCFA26F0A30900066BD6 /* OnboardingSlide.swift in Sources */,
 				047FDCF826F0A1FF00066BD6 /* UIView+Extension.swift in Sources */,
 				04EEF90F26F3F128002BD50F /* BigDishCollectionViewCell.swift in Sources */,
@@ -504,7 +493,6 @@
 				04EEF8FA26F2875B002BD50F /* HomeViewController.swift in Sources */,
 				0415052126F804A4001AA01B /* ListDishesViewController.swift in Sources */,
 				04EEF90426F2B7B4002BD50F /* DishCategory.swift in Sources */,
-				0415055B26FAA2B1001AA01B /* RegistrationViewController.swift in Sources */,
 				04EEF90626F2BB32002BD50F /* String+Extension.swift in Sources */,
 				0415056127014738001AA01B /* MenuConstants.swift in Sources */,
 				0415056527036950001AA01B /* UserDefaults+Extention.swift in Sources */,

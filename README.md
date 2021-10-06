@@ -1,6 +1,8 @@
 # BigBite
 Restaurant's food delivery
 
+![BigBite](https://user-images.githubusercontent.com/68674699/136265559-4bf7f01f-6a45-41aa-8775-fa79bdaf7669.png)
+
 I almost done with this app, I'm going to create a presentation of this app at this read me file, when I will finish. 
 But you also can read files, and watch a code.
 

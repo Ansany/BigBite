@@ -36,6 +36,10 @@ class BasketViewController: UIViewController {
     
     @IBAction func orderPressed(_ sender: UIButton) {
         
+        if BasketViewController.orderList.isEmpty {
+            setupInformationAlert(alertTitle: "You haven't added anything to your cart", alertMessage: "Please go back to the main page and place an order", actionTitle: "OK")
+        }
+        
         if let collectionName = Auth.auth().currentUser?.phoneNumber {
             for order in BasketViewController.orderList {
                 db.collection(collectionName).addDocument(data: ["Amount": order.amount, "DishName": order.dish.name, "TotalPrice": order.totalPrice, "Discount": promoIsAccept, "Date": Date().timeIntervalSince1970]) { err in

@@ -62,7 +62,7 @@ class BasketViewController: UIViewController {
         basketTableView.register(UINib(nibName: BasketTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: BasketTableViewCell.identifier)
     }
     
-    func updateTotalPrice() {
+    private func updateTotalPrice() {
         totalPriceValue = 0
         for order in BasketViewController.orderList {
             totalPriceValue += order.totalPrice
@@ -71,12 +71,14 @@ class BasketViewController: UIViewController {
         totalPrice.text = String(format: "$ %.2f", totalPriceValue)
     }
     
-    func setupOrders() {
+    private func setupOrders() {
         DispatchQueue.main.async {
             self.updateTotalPrice()
             self.basketTableView.reloadData()
         }
     }
+    
+//MARK: - showPromoAlert method
     
     func showPromoAlert() {
         var textField = UITextField()

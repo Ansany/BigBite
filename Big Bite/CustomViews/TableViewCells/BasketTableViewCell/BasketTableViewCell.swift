@@ -16,7 +16,7 @@ class BasketTableViewCell: UITableViewCell {
     @IBOutlet weak var basketCellNameLabel: UILabel!
     @IBOutlet weak var basketCellCountLabel: UILabel!
      
-    func setup(_ order: Order) {
+    private func setup(_ order: Order) {
         basketCellImage.image = UIImage(named: order.dish.image)
         basketCellPriceLabel.text = String(format: "$ %.2f", (order.totalPrice))
         basketCellNameLabel.text = order.dish.name

@@ -16,7 +16,7 @@ class BigDishCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var dishDescriptionLabel: UILabel!
     @IBOutlet weak var dishPriceLabel: UILabel!
     
-    func setup(_ category: Dish) {
+    private func setup(_ category: Dish) {
         dishTitleLabel.text = category.name
         dishImage.image = UIImage(named: category.image)
         dishDescriptionLabel.text = category.description

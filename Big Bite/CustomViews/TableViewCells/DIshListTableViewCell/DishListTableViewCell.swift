@@ -28,7 +28,7 @@ class DishListTableViewCell: UITableViewCell {
     var imageString = ""
     
     
-    func setup(_ dish: Dish) {
+    private func setup(_ dish: Dish) {
         dishListImageView.image = UIImage(named: dish.image)
         dishListTitleLabel.text = dish.name
         dishListPriceLabel.text = dish.formatedPrice

@@ -8,14 +8,10 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var popularCollectionView: UICollectionView!
     @IBOutlet weak var glutenFreeCollectionView: UICollectionView!
-    
-    var categories: [DishCategory] = [Menu.Categories.burgerCategory, Menu.Categories.pizzaCategory, Menu.Categories.sushiCategory, Menu.Categories.saladCategory, Menu.Categories.drinkCategory]
-    var popularDish: [Dish] = [Menu.Pizza.californiaStyle, Menu.Burgers.blackStar, Menu.Sushi.unagiNigiri, Menu.Pizza.pepperoni]
-    var glutenFreeDishes: [Dish] = [Menu.GlutenFree.glazedSalmon, Menu.GlutenFree.larendy, Menu.GlutenFree.skillet]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +23,10 @@ class HomeViewController: UIViewController {
         popularCollectionView.register(UINib(nibName: BigDishCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: BigDishCollectionViewCell.identifier)
         glutenFreeCollectionView.register(UINib(nibName: GlutenFreeCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: GlutenFreeCollectionViewCell.identifier)
     }
-
+    
+    var categories: [DishCategory] = [Menu.Categories.burgerCategory, Menu.Categories.pizzaCategory, Menu.Categories.sushiCategory, Menu.Categories.saladCategory, Menu.Categories.drinkCategory]
+    var popularDish: [Dish] = [Menu.Pizza.californiaStyle, Menu.Burgers.blackStar, Menu.Sushi.unagiNigiri, Menu.Pizza.pepperoni]
+    var glutenFreeDishes: [Dish] = [Menu.GlutenFree.glazedSalmon, Menu.GlutenFree.larendy, Menu.GlutenFree.skillet]
 }
 
 //MARK: - UICollectionViewDelegate, UICollectionViewDataSource

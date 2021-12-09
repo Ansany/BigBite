@@ -20,9 +20,7 @@ class DishDetailViewController: UIViewController {
     
     var dish: Dish!
     var items = 1
-        
     var dishOrder: Order!
-    var numberOfOrder = Int.random(in: 1...50)
     
     override func viewDidLoad() {
         super.viewDidLoad()

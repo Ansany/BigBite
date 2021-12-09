@@ -60,7 +60,7 @@ class PhoneAuthViewController: UIViewController {
         }
     }
     
-    func sendPhoneNumber() {
+    private func sendPhoneNumber() {
         if let text = phoneNumberTextField.text, !text.isEmpty {
             let number = "+1\(text)"
             AuthManager.shared.startAuth(phoneNumber: number) { [weak self] success in
@@ -74,8 +74,8 @@ class PhoneAuthViewController: UIViewController {
         }
     }
     
-    func showSecondStep(isHidden: Bool) {
-        if isHidden == true {
+    private func showSecondStep(isHidden: Bool) {
+        if isHidden {
             step2Label.isHidden = true
             smsTextField.isHidden = true
             sendSmsButton.isHidden = true

@@ -16,7 +16,7 @@ class GlutenFreeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var glutenFreeDescription: UILabel!
     @IBOutlet weak var glutenFreePriceLabel: UILabel!
     
-    private func setup(_ dish: Dish) {
+    func setup(_ dish: Dish) {
         glutenFreeImage.image = UIImage(named: dish.image)
         glutenFreeLabel.text = dish.name
         glutenFreeDescription.text = dish.description
